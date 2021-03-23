@@ -1,6 +1,11 @@
-/* font-family: 'Montserrat', sans-serif;
-font-family: 'Playfair Display', serif; */
+/* 
+font-family: 'Montserrat', sans-serif;
+font-family: 'Playfair Display', serif; 
+*/
 /* <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap" rel="stylesheet"></link> */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap');
+
 
 html,
 body {
@@ -27,4 +32,16 @@ a:hover {
 img {
   max-width: 100%;
   display: block;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif; 
+  font-size: 53px;
+  font-style: italic;
+  font-weight: bold;
+  letter-spacing: normal;
+  line-height: 61.6279067993164px;
+  text-transform: none;
+  color: #f64c71;
+  margin: 20px;
 }
