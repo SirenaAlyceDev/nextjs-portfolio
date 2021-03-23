@@ -1,8 +1,13 @@
+import React, { useState } from "react";
 import Head from "next/head";
 import styles from "./layout.module.css";
 import Link from "next/link";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Row, Col, Jumbotron } from "reactstrap";
+import { Container, Row, Col, Jumbotron,   Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav } from "reactstrap";
 import utilStyles from "../styles/utils.module.css";
 
 
@@ -11,7 +16,32 @@ export const siteTitle =
   "Sirena Alyce | Data Analyst | FullStack Developer | Atlanta";
 
 export default function Layout({ children, home }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => setIsOpen(!isOpen);
+
   return (
+    <>
+    <Navbar color="dark" dark expand="md">
+        <NavbarBrand href="/home">SirenaAlyce</NavbarBrand>
+        <NavbarToggler onClick={toggle} />
+        <Collapse isOpen={isOpen} navbar>
+          <Nav navbar className="ml-auto">
+            <Link href="/">
+              <a>Home</a>
+            </Link>
+            <Link href="/blog">
+              <a>Blog</a>
+            </Link>
+            <Link href="/contact">
+              <a>Contact</a>
+            </Link>
+            {/* <Link>Shop</Link> */}
+            <Link href="https://www.buymeacoffee.com/sirenaalyce">
+              <a>Buy Me a Coffee!</a>
+            </Link>
+          </Nav>
+        </Collapse>
+      </Navbar>
     <Container>
       <Head>
         <link rel="icon" href="/favicon.ico" />
@@ -84,5 +114,19 @@ export default function Layout({ children, home }) {
         </div>
       )}
     </Container>
+    <Container>
+      <Row>
+          <Col>
+          logo
+          </Col>
+          <Col>
+          link
+          </Col>
+          <Col>
+          social icons
+          </Col>
+      </Row>
+      </Container>
+</>
   );
 }
