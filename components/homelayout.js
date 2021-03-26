@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image"
 import Link from "next/link";
 import styles from "./homelayout.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -10,7 +11,10 @@ import {
   Navbar,
   NavbarToggler,
   NavbarBrand,
-  Nav
+  Nav,
+  NavItem,
+  NavLink,
+  Jumbotron
 } from "reactstrap";
 export default function HomeLayout({ children }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,39 +26,66 @@ export default function HomeLayout({ children }) {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav navbar className="ml-auto">
-            <Link href="/">
-              <a>Home</a>
-            </Link>
-            <Link href="/blog">
-              <a>Blog</a>
-            </Link>
-            <Link href="/contact">
-              <a>Contact</a>
-            </Link>
+            <NavItem>
+              <NavLink href="/">
+                <a>Home</a>
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/blog">
+                <a>Blog</a>
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/contact">
+                <a>Contact</a>
+              </NavLink>
+            </NavItem>
             {/* <Link>Shop</Link> */}
-            <Link href="https://www.buymeacoffee.com/sirenaalyce">
-              <a>Buy Me a Coffee!</a>
-            </Link>
+            <NavItem>
+              <NavLink href="https://www.buymeacoffee.com/sirenaalyce">
+                <a>Buy Me a Coffee!</a>
+              </NavLink>
+            </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
-      <Container>
+      <Jumbotron className="text-left w-100" fluid>
+          <Row>
+            <Col xs="1" className="align-self-center">
+              {/* <VerticalNav /> */}
+            </Col>
+            <Col className="align-self-center">
+              <h1 className="display-3">Hi, I'm Sirena Alyce.</h1>
+              <p className="font-weight-bold">
+                Freelance Full-Stack Web Developer & Data Analyst
+              </p>
+              <p>
+                Lover of all things <strong>data and development</strong>,{" "}
+                <strong>tech</strong> enthusiast, self-proclaimed{" "}
+                <strong>lifeling learner</strong>,{" "}
+                <strong>problem solver and goal-setter</strong>, dog lover,{" "}
+                <strong>Black Woman</strong>, curiosity is my middle name.
+              </p>
+            </Col>
+            <Col xs="4" className="align-self-end">
+              <Image
+                src="/images/profile.jpg" // Route of the image file
+                height={200} // Desired size with correct aspect ratio
+                width={200} // Desired size with correct aspect ratio
+                className="img-fluid rounded-circle"
+                alt="Your Name"
+              />
+            </Col>
+          </Row>
+        </Jumbotron>
+      <Container >{children}</Container>
+      <Container fluid>
         <Row>
-          <Col>{children}</Col>
+          <Col>logo</Col>
+          <Col>link</Col>
+          <Col>social icons</Col>
         </Row>
-      </Container>
-      <Container>
-      <Row>
-          <Col>
-          logo
-          </Col>
-          <Col>
-          link
-          </Col>
-          <Col>
-          social icons
-          </Col>
-      </Row>
       </Container>
     </>
   );

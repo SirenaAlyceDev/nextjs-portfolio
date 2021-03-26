@@ -1,3 +1,9 @@
+/* color scheme */
+/* #2126B2
+#553D67
+#f64c71
+#99738e
+#2f2fa2 */
 /* 
 font-family: 'Montserrat', sans-serif;
 font-family: 'Playfair Display', serif; 
@@ -20,12 +26,26 @@ body {
   box-sizing: border-box;
 }
 
-a {
-  color: #0070f3;
-  text-decoration: none;
+a.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  color: #f64c71 !important;  
+  font-style: italic;
 }
 
+a.nav-link {
+  font-family: 'Montserrat', sans-serif;
+  color:#fff !important;
+}
+/* 
+a {
+  color: #2f2fa2 !important;
+  text-decoration: none;
+  font-family:'Montserrat', sans-serif;
+} */
+
 a:hover {
+  color: #99738e !important;
   text-decoration: underline;
 }
 
@@ -34,14 +54,42 @@ img {
   display: block;
 }
 
-h1 {
-  font-family: 'Playfair Display', serif; 
-  font-size: 53px;
-  font-style: italic;
-  font-weight: bold;
-  letter-spacing: normal;
-  line-height: 61.6279067993164px;
-  text-transform: none;
+nav.bg-dark {
+  background-color: #2126B2 !important;
+}
+
+li a.nav-link {
+  font-family: 'Montserrat', sans-serif;
+  color:#fff;}
+
+.jumbotron {
+  background-color: #2126B2 !important;
+  color: #fff;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+h1.display-3 {
+  font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: normal;
+    line-height: 61.6279067993164px;
+    text-transform: none;
+    color: #f64c71;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family:'Montserrat', sans-serif;
+  font-weight: bolder;
   color: #f64c71;
-  margin: 20px;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+}
+
+li {
+  font-family:'Montserrat', sans-serif;
 }
