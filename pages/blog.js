@@ -50,7 +50,9 @@ export default function Home({ allPostsData }) {
       <section>
         <Row>
           <Col>
-          {heroPost.title}
+          {heroPost.id} <br />
+          {heroPost.title} <br />
+          {heroPost.date} <br />
           </Col>
           <Col>
           image goes here
@@ -61,7 +63,6 @@ export default function Home({ allPostsData }) {
       <section>
         <h2>MORE STORIES</h2>
         <Container>
-          {morePosts.id}
           {/* {allPostsData.map(({ id, date, title, image }) => (
             <Row key={id}>
               <Col xs="6">
