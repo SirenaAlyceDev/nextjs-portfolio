@@ -1,51 +1,95 @@
-import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
-import utilStyles from '../styles/utils.module.css'
-import { getSortedPostsData } from '../lib/posts'
-import Link from 'next/link'
-import Date from '../components/date'
+import Head from "next/head";
+import BlogLayout, { siteTitle } from "../components/bloglayout";
+import { getSortedPostsData } from "../lib/posts";
+import Link from "next/link";
+import Date from "../components/date";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Container, Row, Col } from "reactstrap";
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData()
+  const allPostsData = getSortedPostsData();
   return {
     props: {
-      allPostsData
-    }
-  }
+      allPostsData,
+    },
+  };
 }
 
-
 export default function Home({ allPostsData }) {
+  const heroPost = allPostsData[0]
+  const morePosts = allPostsData.slice(1)
   return (
-    <Layout home>
+    <BlogLayout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
+      <section>
+        <Row>
+          <Col>
+            <p>
+              Women of color continue to be underrepresented in STEM careers
+            </p>
+            <ul>
+              <p>This blog has 2 main purposes:</p>
+              <li>
+                provided resources to help guide learning on data analytics,
+                coding, professional and personal development, and freelancing
+              </li>
+              <li>
+                create a community of support for like-minded individuals and
+                encourage women of color to pursue careers in STEM
+              </li>
+            </ul>
+            <p>
+              From this platform I want women of color to feel inspired,
+              encouraged, supported, and confident in pursuing a STEM career.{" "}
+            </p>
+          </Col>
+        </Row>
+      </section>
+      <section>
+        <Row>
+          <Col>
+          {heroPost.title}
+          </Col>
+          <Col>
+          image goes here
+          </Col>
+        </Row>
+      </section>
       {/* the layout stuff is populating here from the layout component */}
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2>LATEST ON THE BLOG</h2>
-        <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title, image }) => (
-            <li className={utilStyles.listItem} key={id}>
-            <Link href={`/posts/${id}`}>
+      <section>
+        <h2>MORE STORIES</h2>
+        <Container>
+          {morePosts.id}
+          {/* {allPostsData.map(({ id, date, title, image }) => (
+            <Row key={id}>
+              <Col xs="6">
+              <Link href={`/posts/${id}`}>
               <a>{title}</a>
             </Link>
             <br />
-            <small className={utilStyles.lightText}>
+            <small>
               <Date dateString={date} />
             </small>
             <img src={image} />
-          </li>
-          ))}
-        </ul>
+              </Col>
+              <Col xs="6">
+              <Link href={`/posts/${id}`}>
+              <a>{title}</a>
+            </Link>
+            <br />
+            <small>
+              <Date dateString={date} />
+            </small>
+            <img src={image} />
+              </Col>
+          </Row>
+          ))} */}
+        </Container>
       </section>
-      <section>
-        add subscription form
-      </section>
-      <div>
-        add footer component
-      </div>
-    </Layout>
-  )
+      <section>add subscription form</section>
+      <div>add footer component</div>
+    </BlogLayout>
+  );
 }
-

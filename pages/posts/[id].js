@@ -1,4 +1,4 @@
-import Layout from '../../components/layout'
+import BlogLayout from '../../components/bloglayout'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Head from 'next/head'
 import Date from '../../components/date'
@@ -32,16 +32,16 @@ export default function Post({ postData, home }) {
         <title>{postData.title}</title>
       </Head>
       <article>
-        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-        <div className={utilStyles.lightText}>
+        <h1>{postData.title}</h1>
+        <div>
           <Date dateString={postData.date} />
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
       {!home && (
       <div>
-        <Link href="/">
-          <a>← Back to home</a>
+        <Link href="/blog">
+          <a>← Back to blog home</a>
         </Link>
       </div>
     )}

@@ -10,8 +10,7 @@ font-family: 'Playfair Display', serif;
 */
 /* <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap" rel="stylesheet"></link> */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
 
 html,
 body {
@@ -60,7 +59,8 @@ nav.bg-dark {
 
 li a.nav-link {
   font-family: 'Montserrat', sans-serif;
-  color:#fff;}
+  color:#fff;
+}
 
 .jumbotron {
   background-color: #2126B2 !important;
@@ -73,7 +73,7 @@ h1.display-3 {
   font-family: 'Playfair Display', serif;
     font-size: 72px;
     font-style: italic;
-    font-weight: bold;
+    font-weight: 800;
     letter-spacing: normal;
     line-height: 61.6279067993164px;
     text-transform: none;
@@ -82,14 +82,16 @@ h1.display-3 {
 
 h2, h3, h4, h5, h6 {
   font-family:'Montserrat', sans-serif;
-  font-weight: bolder;
+  font-weight: 900;
   color: #f64c71;
 }
 
 p {
   font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
 }
 
 li {
   font-family:'Montserrat', sans-serif;
+  font-weight: 300;
 }

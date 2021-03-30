@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Head from "next/head";
-import styles from "./layout.module.css";
 import Link from "next/link";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
@@ -16,13 +15,12 @@ import {
   NavItem,
   NavLink,
 } from "reactstrap";
-import utilStyles from "../styles/utils.module.css";
 
 const blogTitle = "Techincolr.";
 export const siteTitle =
   "Sirena Alyce | Data Analyst | FullStack Developer | Atlanta";
 
-export default function Layout({ children, home }) {
+export default function BlogLayout({ children, home }) {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
@@ -88,50 +86,9 @@ export default function Layout({ children, home }) {
           <meta name="og:title" content={siteTitle} />
           <meta name="twitter:card" content="summary_large_image" />
         </Head>
-        <Row>
-          <Col>
-            <p>
-              Women of color continue to be underrepresented in STEM careers
-            </p>
-            <ul>
-              <p>This blog has 2 main purposes:</p>
-              <li>
-                provided resources to help guide learning on data analytics,
-                coding, professional and personal development, and freelancing
-              </li>
-              <li>
-                create a community of support for like-minded individuals and
-                encourage women of color to pursue careers in STEM
-              </li>
-            </ul>
-            <p>
-              From this platform I want women of color to feel inspired,
-              encouraged, supported, and confident in pursuing a STEM career.{" "}
-            </p>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <h3>FEATURED BLOG TITLE</h3>
-            <Date />
-          </Col>
-          <Col>
-            <p>
-              Croissant marshmallow bear claw jelly beans chocolate liquorice
-              pastry marshmallow. Bonbon toffee biscuit croissant cake jujubes
-              dessert pudding. Danish chocolate cake cotton candy. Toffee carrot
-              cake gummi bears gummies croissant carrot cake.
-            </p>
-          </Col>
-        </Row>
+      
         <main>{children}</main>
-        {!home && (
-          <div className={styles.backToHome}>
-            <Link href="/">
-              <a>← Back to home</a>
-            </Link>
-          </div>
-        )}
+
       </Container>
       <Container>
         <Row>
