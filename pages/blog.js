@@ -1,5 +1,6 @@
 import Head from "next/head";
 import BlogLayout, { siteTitle } from "../components/bloglayout";
+import styles from "../components/bloglayout.module.css";
 import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/date";
@@ -16,12 +17,13 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPostsData }) {
-  const heroPost = allPostsData[0]
-  const morePosts = allPostsData.slice(1)
+
   return (
     <BlogLayout home>
       <Head>
-        <title>{siteTitle}</title>
+        <title>
+          Sirena Alyce | Data Analyst | FullStack Developer | Atlanta, GA
+        </title>
       </Head>
       <section>
         <Row>
@@ -47,50 +49,32 @@ export default function Home({ allPostsData }) {
           </Col>
         </Row>
       </section>
-      <section>
-        <Row>
-          <Col>
-          {heroPost.id} <br />
-          {heroPost.title} <br />
-          {heroPost.date} <br />
-          </Col>
-          <Col>
-          image goes here
-          </Col>
-        </Row>
-      </section>
       {/* the layout stuff is populating here from the layout component */}
-      <section>
+      <section className="my-3">
         <h2>MORE STORIES</h2>
         <Container>
-          {/* {allPostsData.map(({ id, date, title, image }) => (
-            <Row key={id}>
+          <Row>
+            {allPostsData.map(({ id, date, title, image }) => (
               <Col xs="6">
-              <Link href={`/posts/${id}`}>
-              <a>{title}</a>
-            </Link>
-            <br />
-            <small>
-              <Date dateString={date} />
-            </small>
-            <img src={image} />
+                <Link href={`/posts/${id}`}>
+                  <a>{title}</a>
+                </Link>
+                <br />
+                <small>
+                  <Date dateString={date} />
+                </small>
               </Col>
-              <Col xs="6">
-              <Link href={`/posts/${id}`}>
-              <a>{title}</a>
-            </Link>
-            <br />
-            <small>
-              <Date dateString={date} />
-            </small>
-            <img src={image} />
-              </Col>
+            ))}
           </Row>
-          ))} */}
         </Container>
       </section>
-      <section>add subscription form</section>
-      <div>add footer component</div>
+      <section>
+        <Container>
+          <Row>
+            <Col>add subscription form</Col>
+          </Row>
+        </Container>
+      </section>
     </BlogLayout>
   );
 }
