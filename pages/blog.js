@@ -54,7 +54,7 @@ export default function Home({ allPostsData }) {
         <h2>MORE STORIES</h2>
         <Container>
           <Row>
-            {allPostsData.slice(0,2).map(({ id, date, title, image }) => (
+            {allPostsData.slice(0,2).map(({ id, date, title, image, extra }) => (
               <Col xs="6">
                 <Link href={`/posts/${id}`}>
                   <a>{title}</a>
