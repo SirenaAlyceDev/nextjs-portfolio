@@ -1,6 +1,5 @@
 import Head from "next/head";
-import BlogLayout, { siteTitle } from "../components/bloglayout";
-import styles from "../components/bloglayout.module.css";
+import BlogLayout from "../components/bloglayout";
 import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/date";
@@ -17,7 +16,6 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPostsData }) {
-
   return (
     <BlogLayout home>
       <Head>
@@ -49,32 +47,57 @@ export default function Home({ allPostsData }) {
           </Col>
         </Row>
       </section>
+      <section className="my-3">
+      <h2>FEATURED STORIES</h2>
+        <Container>
+          <Row>
+            {allPostsData
+              .filter((posts) => posts["featured"] === true)
+              .map(({ id, date, title, image, extra }) => (
+                <>
+                  <Col>
+                    <Link href={`/posts/${id}`}>
+                      <a>{title}</a>
+                    </Link>
+                    <br />
+                    <small>
+                      <Date dateString={date} />
+                    </small>
+                  </Col>
+                  <Col>image goes here</Col>
+                </>
+              ))}
+          </Row>
+        </Container>
+      </section>
       {/* the layout stuff is populating here from the layout component */}
       <section className="my-3">
         <h2>MORE STORIES</h2>
         <Container>
           <Row>
-            {allPostsData.slice(0,2).map(({ id, date, title, image, extra }) => (
-              <Col xs="6">
-                <Link href={`/posts/${id}`}>
-                  <a>{title}</a>
-                </Link>
-                <br />
-                <small>
-                  <Date dateString={date} />
-                </small>
-              </Col>
-            ))}
+            {allPostsData
+              .slice(0, 2)
+              .map(({ id, date, title, image, extra }) => (
+                <Col xs="6">
+                  <Link href={`/posts/${id}`}>
+                    <a>{title}</a>
+                  </Link>
+                  <br />
+                  <small>
+                    <Date dateString={date} />
+                  </small>
+                </Col>
+              ))}
           </Row>
         </Container>
       </section>
-      <section>
+      {/* <section>
         <Container>
           <Row>
             <Col>add subscription form</Col>
           </Row>
         </Container>
-      </section>
+      </section> */}
     </BlogLayout>
   );
 }

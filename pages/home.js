@@ -1,11 +1,21 @@
 import Image from "next/image"
 import Head from "next/head"
 import Link from "next/link"
+import { getSortedPostsData } from '../lib/posts'
 import HomeLayout from "../components/homelayout"
 import "bootstrap/dist/css/bootstrap.min.css"
-import { Jumbotron, Row, Col, Container, Button } from "reactstrap"
+import { Row, Col, Container, Button } from "reactstrap"
 
-export default function HomePage() {
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+}
+
+export default function HomePage({allPostsData}) {
   return (
     <>
       <HomeLayout>
@@ -16,6 +26,7 @@ export default function HomePage() {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Container>
+          {console.log(allPostsData)}
           <Row>
             <Col>
               <h2>What I Do</h2>
@@ -72,6 +83,7 @@ export default function HomePage() {
             <Col>
               <h2>Latest On The Blog</h2>
             </Col>
+           
           </Row>
 
           <Row>
@@ -79,7 +91,7 @@ export default function HomePage() {
               <h2>Work With Me</h2>
               <Link href="/contact" className="btn home-button">
                 <a class="btn btn-primary" role="button">
-                  Let's Get Started!
+                  Let's Connect!
                 </a>
               </Link>
             </Col>
