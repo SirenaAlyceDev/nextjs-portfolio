@@ -69,6 +69,17 @@ li a.nav-link {
   padding-right: 20px;
 }
 
+h1 {
+  font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    font-style: italic;
+    font-weight: 800;
+    letter-spacing: normal;
+    line-height: 61.6279067993164px;
+    text-transform: none;
+    color: #f64c71;
+}
+
 h1.display-3 {
   font-family: 'Playfair Display', serif;
     font-size: 72px;
@@ -94,4 +105,16 @@ p {
 li {
   font-family:'Montserrat', sans-serif;
   font-weight: 300;
+}
+
+.fa {
+  color: #f64c71;
+}
+
+.footer {
+  background-color:#2126B2;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: small;
 }

@@ -15,6 +15,7 @@ import {
   NavItem,
   NavLink,
 } from "reactstrap";
+import Footer from "./footer";
 
 const blogTitle = "Techincolr.";
 export const siteTitle =
@@ -90,13 +91,7 @@ export default function BlogLayout({ children, home }) {
         <main>{children}</main>
 
       </Container>
-      <Container>
-        <Row>
-          <Col>logo</Col>
-          <Col>link</Col>
-          <Col>social icons</Col>
-        </Row>
-      </Container>
+<Footer />
     </>
   );
 }

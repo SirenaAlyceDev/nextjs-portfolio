@@ -1,8 +1,8 @@
 import Image from "next/image"
 import Head from "next/head"
-import Link from "next/link"
-import { getSortedPostsData } from '../lib/posts'
 import HomeLayout from "../components/homelayout"
+import { getSortedPostsData } from "../lib/posts";
+import Link from "next/link"
 import "bootstrap/dist/css/bootstrap.min.css"
 import { Row, Col, Container, Button } from "reactstrap"
 
@@ -15,7 +15,7 @@ export async function getStaticProps() {
   };
 }
 
-export default function HomePage({allPostsData}) {
+export default function HomePage({ allPostsData }) {
   return (
     <>
       <HomeLayout>
@@ -90,7 +90,7 @@ export default function HomePage({allPostsData}) {
             <Col>
               <h2>Work With Me</h2>
               <Link href="/contact" className="btn home-button">
-                <a class="btn btn-primary" role="button">
+                <a className="btn btn-primary" role="button">
                   Let's Connect!
                 </a>
               </Link>

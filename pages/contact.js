@@ -1,12 +1,14 @@
-import HomeLayout from "../components/homelayout"
+import SecondaryLayout from "../components/secondarypagelayout"
 import ContactForm from "../components/contact"
+import { Container } from "reactstrap";
 export default function Contact() {
   return (
     <>
-      <HomeLayout>
-        <h1>This will be the contact page for the portfolio</h1>
-        <Contact />
-      </HomeLayout>
+      <SecondaryLayout>
+        <Container>
+        <ContactForm />
+        </Container>
+      </SecondaryLayout>
     </>
   );
 }

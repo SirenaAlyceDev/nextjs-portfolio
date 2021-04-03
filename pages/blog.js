@@ -25,6 +25,8 @@ export default function Home({ allPostsData }) {
       </Head>
       <section>
         <Row>
+        {console.log(allPostsData)}
+
           <Col>
             <p>
               Women of color continue to be underrepresented in STEM careers
@@ -91,13 +93,6 @@ export default function Home({ allPostsData }) {
           </Row>
         </Container>
       </section>
-      {/* <section>
-        <Container>
-          <Row>
-            <Col>add subscription form</Col>
-          </Row>
-        </Container>
-      </section> */}
     </BlogLayout>
   );
 }
