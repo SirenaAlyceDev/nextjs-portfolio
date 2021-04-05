@@ -64,7 +64,7 @@ export default function HomeLayout({ children }) {
               <p>
                 Lover of all things <strong>data and development</strong>,{" "}
                 <strong>tech</strong> enthusiast, self-proclaimed{" "}
-                <strong>lifeling learner</strong>,{" "}
+                <strong>forever learner</strong>,{" "}
                 <strong>problem solver and goal-setter</strong>, dog lover,{" "}
                 <strong>Black Woman</strong>, curiosity is my middle name.
               </p>
