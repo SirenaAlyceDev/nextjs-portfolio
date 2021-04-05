@@ -1,15 +1,14 @@
-import React from 'react'
-import Image from "next/image"
-import Head from "next/head"
-import HomeLayout from "../components/homelayout"
-import { getSortedPostsData } from "../lib/posts"
-import Link from "next/link"
-import "bootstrap/dist/css/bootstrap.min.css"
+import React from "react";
+import Image from "next/image";
+import Head from "next/head";
+import HomeLayout from "../components/homelayout";
+import { getSortedPostsData } from "../lib/posts";
+import Link from "next/link";
+import "bootstrap/dist/css/bootstrap.min.css";
 import {
   Row,
   Col,
   Container,
-  Button,
   Card,
   CardImg,
   CardSubtitle,
@@ -18,7 +17,12 @@ import {
   CardText,
   CardBody,
   List,
-} from "reactstrap"
+} from "reactstrap";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import CardMedia from "@material-ui/core/CardMedia";
+import Button from "@material-ui/core/Button";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -98,15 +102,20 @@ export default function HomePage({ allPostsData }) {
                         <h6>Analytic Tools:</h6>
                       </CardSubtitle>
                       <CardText>
-                          <p>SAS & Python</p>
+                        <p>SAS & Python</p>
                       </CardText>
                       <CardSubtitle>
                         <h6>Experience:</h6>
                       </CardSubtitle>
                       <CardText>
-                      <List type="unstyled">
-                          <li className="my-1">5+ years of experience in Public Health</li>
-                          <li className="my-1">4+ years of experience in statistical programming & data management</li>
+                        <List type="unstyled">
+                          <li className="my-1">
+                            5+ years of experience in Public Health
+                          </li>
+                          <li className="my-1">
+                            4+ years of experience in statistical programming &
+                            data management
+                          </li>
                         </List>
                       </CardText>
                     </CardBody>
@@ -116,19 +125,96 @@ export default function HomePage({ allPostsData }) {
             </Col>
           </Row>
           <Row className="my-3 text-center">
-              <Col>
+            <Col>
               <h2 className="text-center">My Projects</h2>
               <p>Here are a few projects that I have designed and built</p>
-              </Col>
+              <Row>
+                <Col>
+                  <Card className="project-card">
+                    <CardActionArea>
+                      <CardMedia
+                        component="img"
+                        height="300"
+                        image="/images/BWordLogo.png"
+                        title="The B Word"
+                      />{" "}
+                      <CardContent>
+                        <h4>The B-Word (Web App)</h4>
+                        <p>
+                          A simple budgeting tool to help you determine your
+                          long-term financial goals, save money, and eliminate
+                          debt.
+                        </p>
+                        <h6>Tools:</h6>
+                        <p>ReactJS, Bootstrap, Reactstrap, Material UI</p>{" "}
+                      </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                      <Button size="small" color="primary" disabled>
+                        In Progress
+                      </Button>
+                      <Button>
+                        <Link href="https://github.com/SirenaAlyceDev/react-budget">
+                        <a className="project-link">GitHub Repo</a>
+                        </Link>
+                      </Button>
+                    </CardActions>
+                  </Card>
+                </Col>
+                <Col>
+                  <Card className="project-card">
+                    <CardActionArea>
+                      <CardMedia
+                        component="img"
+                        height="300"
+                        image="/images/BWordLogo.png"
+                        title="The B Word"
+                      />
+                      <CardContent>
+                        <h4>The B-Word (Mobile App)</h4>
+                        <p>
+                          A simple budgeting tool to help you determine your
+                          long-term financial goals, save money, and eliminate
+                          debt.
+                        </p>
+                        <h6>Tools:</h6>
+                        <p>React Native, Bootstrap, Reactstrap, Material UI</p>
+                      </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                      <Button size="small" color="primary" disabled>
+                        In Progress
+                      </Button>
+                      <Button>
+                        <Link href="https://github.com/SirenaAlyceDev/react-native">
+                          <a className="project-link">GitHub Repo</a>
+                        </Link>
+                      </Button>
+                    </CardActions>
+                  </Card>
+                </Col>
+              </Row>
+            </Col>
           </Row>
           <Row className="my-3">
             <Col>
-              <h2 className="text-center">Work With Me</h2>
-              <Link href="/contact" className="btn home-button">
-                <a className="btn btn-primary" role="button">
-                  Let's Connect!
-                </a>
-              </Link>
+              <Row>
+              <Col>
+                  <h2 className="text-center">Work With Me</h2>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <p>Interested in working together? We should chat.</p>
+                </Col>
+                <Col className="text-center">
+                  <Link href="/contact" className="btn home-button">
+                    <a className="btn" role="button">
+                      Let's Connect!
+                    </a>
+                  </Link>
+                </Col>
+              </Row>
             </Col>
           </Row>
         </Container>

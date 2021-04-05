@@ -17,7 +17,7 @@ import {
   Jumbotron
 } from "reactstrap";
 import Footer from "./footer";
-export default function SecondaryLayout({ children }) {
+export default function ContactLayout({ children }) {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
   return (
@@ -55,6 +55,9 @@ export default function SecondaryLayout({ children }) {
           <Row>
             <Col className="align-self-center">
               <h1 className="display-3">Let's Connect!</h1>
+              <p className="lead">
+                I want to work with you. Tell me more about your project.
+              </p>
             </Col>
           </Row>
         </Jumbotron>

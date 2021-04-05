@@ -4,7 +4,7 @@ import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/date";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Row, Col } from "reactstrap";
+import { Container, Row, Col, List } from "reactstrap";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -31,8 +31,8 @@ export default function Home({ allPostsData }) {
             <p>
               Women of color continue to be underrepresented in STEM careers
             </p>
-            <ul>
               <p>This blog has 2 main purposes:</p>
+              <List>
               <li>
                 provided resources to help guide learning on data analytics,
                 coding, professional and personal development, and freelancing
@@ -41,7 +41,7 @@ export default function Home({ allPostsData }) {
                 create a community of support for like-minded individuals and
                 encourage women of color to pursue careers in STEM
               </li>
-            </ul>
+            </List>
             <p>
               From this platform I want women of color to feel inspired,
               encouraged, supported, and confident in pursuing a STEM career.{" "}

@@ -69,7 +69,7 @@ export default function HomeLayout({ children }) {
                 <strong>Black Woman</strong>, curiosity is my middle name.
               </p>
             </Col>
-            <Col xs="4" className="align-self-end">
+            <Col xs="4" className="align-self-center">
               <Image
                 src="/images/profile.jpg" // Route of the image file
                 height={200} // Desired size with correct aspect ratio

@@ -5,8 +5,8 @@ import "bootstrap-social/assets/css/font-awesome.css"
 export default function Footer() {
   return (
     <Container className="footer w-100 py-3" fluid>
-      <Row className="align-self-center"> 
-        <Col><p>&#169; 2021 Sirena Alyce, LLC.</p></Col>
+      <Row className="d-flex align-items-center"> 
+        <Col><p className="footer-copyright">&#169; 2021 Sirena Alyce, LLC.</p></Col>
         <Col className="text-right">
           <a class="btn btn-social-icon btn-twitter">
             <span class="fa fa-twitter"></span>

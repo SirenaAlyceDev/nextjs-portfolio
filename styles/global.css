@@ -36,12 +36,10 @@ a.nav-link {
   font-family: 'Montserrat', sans-serif;
   color:#fff !important;
 }
-/* 
-a {
-  color: #2f2fa2 !important;
-  text-decoration: none;
-  font-family:'Montserrat', sans-serif;
-} */
+
+a.project-link {
+  color:#2126B2;
+}
 
 a:hover {
   color: #99738e !important;
@@ -91,6 +89,10 @@ h1.display-3 {
     color: #f64c71;
 }
 
+h2 {
+  font-size: 48px !important;
+}
+
 h2, h3, h4, h5, h6 {
   font-family:'Montserrat', sans-serif;
   font-weight: 900;
@@ -108,6 +110,11 @@ li {
   font-size:  18px;
 }
 
+a.btn {
+  background-color: #2126B2;
+  color: #fff;
+}
+
 .developer {
   border-top-left-radius: 0.75rem !important;
   border-bottom-left-radius: 0.75rem !important;
@@ -118,10 +125,19 @@ li {
   border-bottom-right-radius: 0.75rem !important;
 }
 
+.project-card {
+  border-bottom-left-radius: 0.75rem !important;
+  border-bottom-right-radius: 0.75rem !important;
+}
+
 .fa {
   color: #f64c71;
 }
 
+p.footer-copyright {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
 .footer {
   background-color:#2126B2;
   color: #fff;
@@ -129,3 +145,4 @@ li {
   font-weight: 300;
   font-size: small;
 }
+
