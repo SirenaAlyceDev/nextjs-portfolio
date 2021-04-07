@@ -89,6 +89,12 @@ h1.display-3 {
     color: #f64c71;
 }
 
+@media screen and (max-width: 600px) {
+  h1.display-3 {
+    font-size: 63px;
+  }
+}
+
 h2 {
   font-size: 48px !important;
 }
@@ -113,6 +119,11 @@ li {
 a.btn {
   background-color: #2126B2;
   color: #fff;
+}
+
+.contact-button {
+  color: #fff;
+  background-color: #f64c71 !important;
 }
 
 .developer {

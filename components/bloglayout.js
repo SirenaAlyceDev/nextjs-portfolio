@@ -18,8 +18,7 @@ import {
 import Footer from "./footer";
 
 const blogTitle = "Techincolr.";
-export const siteTitle =
-  "Sirena Alyce | Data Analyst | FullStack Developer | Atlanta";
+const siteTitle = "Sirena Alyce | Data Analyst | FullStack Developer | Atlanta";
 
 export default function BlogLayout({ children, home }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -56,7 +55,7 @@ export default function BlogLayout({ children, home }) {
           </Nav>
         </Collapse>
       </Navbar>
-      <Jumbotron fluid className="px-5">
+      <Jumbotron fluid className="text-left px-5">
           <Row>
             <Col>
               <h1 className="display-3">{blogTitle}</h1>
@@ -74,18 +73,9 @@ export default function BlogLayout({ children, home }) {
             href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap"
             rel="stylesheet"
           ></link>
-          <meta
-            name="description"
-            content="Learn how to build a personal website using Next.js"
-          />
-          <meta
-            property="og:image"
-            content={`https://og-image.vercel.app/${encodeURI(
-              siteTitle
-            )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-          />
-          <meta name="og:title" content={siteTitle} />
-          <meta name="twitter:card" content="summary_large_image" />
+          <title>
+            Sirena Alyce | Data Analyst | FullStack Developer | Atlanta, GA
+          </title>
         </Head>
       
         <main>{children}</main>

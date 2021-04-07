@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Image from "next/image"
+import Image from "next/image";
 import Link from "next/link";
 import styles from "./homelayout.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -14,7 +14,7 @@ import {
   Nav,
   NavItem,
   NavLink,
-  Jumbotron
+  Jumbotron,
 } from "reactstrap";
 import Footer from "./footer";
 export default function HomeLayout({ children }) {
@@ -51,37 +51,34 @@ export default function HomeLayout({ children }) {
           </Nav>
         </Collapse>
       </Navbar>
-      <Jumbotron className="text-left w-100" fluid>
-          <Row>
-            <Col xs="1" className="align-self-center">
-              {/* <VerticalNav /> */}
-            </Col>
-            <Col className="align-self-center">
-              <h1 className="display-3">Hi, I'm Sirena Alyce.</h1>
-              <p className="font-weight-bold">
-                Freelance Full-Stack Web Developer & Data Analyst
-              </p>
-              <p>
-                Lover of all things <strong>data and development</strong>,{" "}
-                <strong>tech</strong> enthusiast, self-proclaimed{" "}
-                <strong>forever learner</strong>,{" "}
-                <strong>problem solver and goal-setter</strong>, dog lover,{" "}
-                <strong>Black Woman</strong>, curiosity is my middle name.
-              </p>
-            </Col>
-            <Col xs="4" className="align-self-center">
-              <Image
-                src="/images/profile.jpg" // Route of the image file
-                height={200} // Desired size with correct aspect ratio
-                width={200} // Desired size with correct aspect ratio
-                className="img-fluid rounded-circle"
-                alt="Your Name"
-              />
-            </Col>
-          </Row>
-        </Jumbotron>
-      <Container >{children}</Container>
-<Footer />
+      <Jumbotron className="text-left px-5" fluid>
+        <Row>
+          <Col className="align-self-center">
+            <h1 className="display-3">Hi, I'm Sirena Alyce.</h1>
+            <p className="font-weight-bold">
+              Freelance Full-Stack Web Developer & Data Analyst
+            </p>
+            <p>
+              Lover of all things <strong>data and development</strong>,{" "}
+              <strong>tech</strong> enthusiast, self-proclaimed{" "}
+              <strong>forever learner</strong>,{" "}
+              <strong>problem solver and goal-setter</strong>, dog lover,{" "}
+              <strong>Black Woman</strong>, curiosity is my middle name.
+            </p>
+          </Col>
+          <Col xs="4" className="align-self-center">
+            <Image
+              src="/images/profile.jpg" // Route of the image file
+              height={200} // Desired size with correct aspect ratio
+              width={200} // Desired size with correct aspect ratio
+              className="img-fluid rounded-circle"
+              alt="Your Name"
+            />
+          </Col>
+        </Row>
+      </Jumbotron>
+      <Container>{children}</Container>
+      <Footer />
     </>
   );
 }

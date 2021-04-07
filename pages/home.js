@@ -196,7 +196,7 @@ export default function HomePage({ allPostsData }) {
               </Row>
             </Col>
           </Row>
-          <Row className="my-3">
+          <Row className="my-5 w-100 work-with-me">
             <Col>
               <Row>
               <Col>
@@ -204,10 +204,8 @@ export default function HomePage({ allPostsData }) {
                 </Col>
               </Row>
               <Row>
-                <Col>
-                  <p>Interested in working together? We should chat.</p>
-                </Col>
                 <Col className="text-center">
+                  <p>Interested in working together? We should chat.</p>
                   <Link href="/contact" className="btn home-button">
                     <a className="btn" role="button">
                       Let's Connect!
