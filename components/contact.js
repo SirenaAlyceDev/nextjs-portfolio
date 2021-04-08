@@ -68,8 +68,7 @@ export default function ContactForm() {
             />
           </Col>
         </Row>
-      </Form>
-      <Button
+        <Button
         type="submit"
         variant="contained"
         color="primary"
@@ -78,6 +77,7 @@ export default function ContactForm() {
       >
         Send
       </Button>
+      </Form>
     </Container>
   );
 }
