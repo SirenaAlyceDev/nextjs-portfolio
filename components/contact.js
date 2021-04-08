@@ -72,6 +72,7 @@ export default function ContactForm() {
             />
           </Col>
         </Row>
+        <div data-netlify-recaptcha="true"></div>
         <Button
         type="submit"
         variant="contained"
