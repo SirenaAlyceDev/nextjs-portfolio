@@ -7,7 +7,17 @@ import { Container, Row, Col, Form } from "reactstrap";
 export default function ContactForm() {
   return (
     <Container fluid>
-      <Form>
+      <Form name="contact" method="POST" data-netlify="true">
+      <Row>
+          <Col>
+            <TextField
+            type="hidden"
+            name="contact"
+            value="contact"
+              required
+            />
+          </Col>
+        </Row>
         <Row>
           <Col>
             <TextField
@@ -55,6 +65,7 @@ export default function ContactForm() {
         </Row>
       </Form>
       <Button
+        type="submit"
         variant="contained"
         color="primary"
         endIcon={<Send />}
