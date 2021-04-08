@@ -9,15 +9,15 @@ import {
   Row,
   Col,
   Container,
-  Card,
   CardImg,
   CardSubtitle,
-  CardGroup,
   CardTitle,
   CardText,
   CardBody,
   List,
 } from "reactstrap";
+import Grid from "@material-ui/core/Grid";
+import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
@@ -48,8 +48,8 @@ export default function HomePage({ allPostsData }) {
             <Col>
               <h2 className="text-center">What I Enjoy</h2>
               <Row className="text-center">
-                <CardGroup>
-                  <Card className="py-5 px-3 developer">
+                <Grid container spacing={2}>
+                  <Grid className="m-3 text-center" item component={Card} md>
                     <CardImg
                       src="images/development.svg"
                       height={64}
@@ -83,8 +83,8 @@ export default function HomePage({ allPostsData }) {
                         </List>
                       </CardText>
                     </CardBody>
-                  </Card>
-                  <Card className="py-5 px-3 data">
+                  </Grid>
+                  <Grid className="m-3 text-center" item component={Card} md>
                     <CardImg
                       src="/images/dashboard.svg"
                       height={64}
@@ -119,8 +119,8 @@ export default function HomePage({ allPostsData }) {
                         </List>
                       </CardText>
                     </CardBody>
-                  </Card>
-                </CardGroup>
+                  </Grid>
+                </Grid>
               </Row>
             </Col>
           </Row>
@@ -129,8 +129,8 @@ export default function HomePage({ allPostsData }) {
               <h2 className="text-center">My Projects</h2>
               <p>Here are a few projects that I have designed and built</p>
               <Row>
-                <Col>
-                  <Card className="project-card">
+                <Grid container spacing={2}>
+                <Grid item component={Card} className="project-card m-3 " md>
                     <CardActionArea>
                       <CardMedia
                         component="img"
@@ -155,14 +155,12 @@ export default function HomePage({ allPostsData }) {
                       </Button>
                       <Button>
                         <Link href="https://github.com/SirenaAlyceDev/react-budget">
-                        <a className="project-link">GitHub Repo</a>
+                          <a className="project-link">GitHub Repo</a>
                         </Link>
                       </Button>
                     </CardActions>
-                  </Card>
-                </Col>
-                <Col>
-                  <Card className="project-card">
+                  </Grid>
+                  <Grid item component={Card} className="project-card m-3" md>
                     <CardActionArea>
                       <CardMedia
                         component="img"
@@ -191,16 +189,18 @@ export default function HomePage({ allPostsData }) {
                         </Link>
                       </Button>
                     </CardActions>
-                  </Card>
-                </Col>
+                  </Grid>
+                </Grid>
               </Row>
             </Col>
           </Row>
-          <Row className="my-5 w-100 work-with-me">
+          <Card className="my-5 w-100 p-3 work-with-me">
             <Col>
               <Row>
-              <Col>
-                  <h2 className="text-center">Work With Me</h2>
+                <Col>
+                  <h2 className="work-with-me-header text-center">
+                    Work With Me
+                  </h2>
                 </Col>
               </Row>
               <Row>
@@ -214,7 +214,7 @@ export default function HomePage({ allPostsData }) {
                 </Col>
               </Row>
             </Col>
-          </Row>
+          </Card>
         </Container>
       </HomeLayout>
     </>

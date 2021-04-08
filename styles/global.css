@@ -126,17 +126,16 @@ a.btn {
   background-color: #f64c71 !important;
 }
 
-.developer {
-  border-top-left-radius: 0.75rem !important;
-  border-bottom-left-radius: 0.75rem !important;
+.work-with-me {
+  background-color: #f64c71 !important;
+  color: #fff !important;
 }
 
-.data {
-  border-top-right-radius: 0.75rem !important;
-  border-bottom-right-radius: 0.75rem !important;
+h2.work-with-me-header{
+  color:#2126B2 !important;
 }
 
-.project-card {
+.work-with-me, .developer, .data, .project-card {
   border-bottom-left-radius: 0.75rem !important;
   border-bottom-right-radius: 0.75rem !important;
 }
