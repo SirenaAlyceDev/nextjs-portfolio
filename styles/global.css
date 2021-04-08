@@ -96,10 +96,13 @@ h1.display-3 {
 }
 
 h2 {
+  font-family: 'Playfair Display', serif;
   font-size: 48px !important;
+  font-weight: 900;
+  color: #f64c71;
 }
 
-h2, h3, h4, h5, h6 {
+ h3, h4, h5, h6 {
   font-family:'Montserrat', sans-serif;
   font-weight: 900;
   color: #f64c71;
