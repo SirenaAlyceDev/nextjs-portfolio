@@ -5,14 +5,15 @@ import Send from "@material-ui/icons/Send";
 import { Container, Row, Col, Form } from "reactstrap";
 
 export default function ContactForm() {
+
   return (
     <Container fluid>
-      <Form name="contact" method="POST" data-netlify="true">
+      <Form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
       <Row>
           <Col>
             <TextField
             type="hidden"
-            name="contact"
+            name="form-name"
             value="contact"
               required
             />
