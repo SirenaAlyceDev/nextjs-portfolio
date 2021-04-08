@@ -27,6 +27,7 @@ export default function ContactForm() {
           <Col>
             <TextField
               required
+              name="firstname"
               id="firstname"
               label="First Name"
               variant="outlined"
@@ -35,6 +36,7 @@ export default function ContactForm() {
             />{" "}
             <TextField
               required
+              name="lastname"
               id="lastname"
               label="Last Name"
               variant="outlined"
@@ -47,6 +49,7 @@ export default function ContactForm() {
           <Col>
             <TextField
               required
+              name="email"
               id="email"
               label="Email"
               variant="outlined"
@@ -58,6 +61,7 @@ export default function ContactForm() {
           <Col>
             <TextField
               required
+              name="message"
               id="message"
               label="Message"
               rows={5}
