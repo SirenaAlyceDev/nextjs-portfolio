@@ -3,19 +3,23 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import Send from "@material-ui/icons/Send";
 import { Container, Row, Col, Form } from "reactstrap";
+import { Input } from "@material-ui/core";
 
 export default function ContactForm() {
-
   return (
     <Container fluid>
-      <Form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-      <Row>
+      <Form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+      >
+        <Row>
           <Col>
-            <TextField
-            type="hidden"
-            name="form-name"
-            value="contact"
-              required
+            <Input
+              type="hidden"
+              name="form-name"
+              value="contact"
             />
           </Col>
         </Row>
