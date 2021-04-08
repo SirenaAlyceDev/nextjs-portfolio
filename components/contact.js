@@ -13,7 +13,7 @@ export default function ContactForm() {
         method="POST"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
-        action="/pages/home"
+        action="/"
       >
         <Row>
           <Col>
