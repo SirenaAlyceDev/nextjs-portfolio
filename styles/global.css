@@ -91,7 +91,7 @@ h1.display-3 {
 
 @media screen and (max-width: 600px) {
   h1.display-3 {
-    font-size: 63px;
+    font-size: 3.125rem;
   }
 }
 

@@ -45,7 +45,7 @@ export default function HomePage({ allPostsData }) {
         <Container>
           <Row className="my-3">
             <Col>
-              <h2 className="text-center">What I Enjoy</h2>
+              <h2 className="text-center">What I Do</h2>
               <Row className="text-center">
                 <Grid container spacing={2}>
                   <Grid className="m-3 text-center" item component={Card} md>
