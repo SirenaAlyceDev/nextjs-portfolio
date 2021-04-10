@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-import Image from "next/image";
 import Head from "next/head";
-import Link from "next/link";
-import styles from "./homelayout.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
   Container,
@@ -18,8 +15,6 @@ import {
   Jumbotron,
 } from "reactstrap";
 import Footer from "./footer";
-
-const siteTitle = "Sirena Alyce | Data Analyst | FullStack Developer | Atlanta";
 
 export default function ContactLayout({ children }) {
   const [isOpen, setIsOpen] = useState(false);
