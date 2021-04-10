@@ -31,7 +31,7 @@ export default function Home({ allPostsData }) {
             <p>
               Women of color continue to be underrepresented in STEM careers
             </p>
-              <p>This blog has 2 main purposes:</p>
+              <p>This blog has two main purposes:</p>
               <List>
               <li>
                 provided resources to help guide learning on data analytics,
@@ -43,8 +43,8 @@ export default function Home({ allPostsData }) {
               </li>
             </List>
             <p>
-              From this platform I want women of color to feel inspired,
-              encouraged, supported, and confident in pursuing a STEM career.{" "}
+              From this platform I want women of color to feel <strong>inspired</strong>,
+              <strong>encouraged</strong>, <strong>supported</strong>, and <strong>confident</strong> in pursuing a STEM career.{" "}
             </p>
           </Col>
         </Row>
