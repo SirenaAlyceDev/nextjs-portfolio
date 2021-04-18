@@ -37,6 +37,10 @@ export default function HomePage({ allPostsData }) {
     <>
       <HomeLayout>
         <Head>
+          <meta
+            name="viewport"
+            content="minimum-scale=1, initial-scale=1, width=device-width"
+          />
           <title>
             Sirena Alyce | Data Analyst | FullStack Developer | Atlanta, GA
           </title>
@@ -45,7 +49,7 @@ export default function HomePage({ allPostsData }) {
         <Container>
           <Row className="my-3">
             <Col>
-              <h2 className="text-center">What I Do</h2>
+              <h2 className="text-center">Specializing In</h2>
               <Row className="text-center">
                 <Grid container spacing={2}>
                   <Grid className="m-3 text-center" item component={Card} md>
@@ -129,7 +133,7 @@ export default function HomePage({ allPostsData }) {
               <p>Here are a few projects that I have designed and built</p>
               <Row>
                 <Grid container spacing={2}>
-                <Grid item component={Card} className="project-card m-3 " md>
+                  <Grid item component={Card} className="project-card m-3 " md>
                     <CardActionArea>
                       <CardMedia
                         component="img"

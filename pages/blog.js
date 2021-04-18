@@ -19,20 +19,24 @@ export default function Home({ allPostsData }) {
   return (
     <BlogLayout home>
       <Head>
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width"
+        />
         <title>
           Sirena Alyce | Data Analyst | FullStack Developer | Atlanta, GA
         </title>
       </Head>
       <section>
         <Row>
-        {console.log(allPostsData)}
+          {console.log(allPostsData)}
 
           <Col>
             <p>
               Women of color continue to be underrepresented in STEM careers
             </p>
-              <p>This blog has two main purposes:</p>
-              <List>
+            <p>This blog has two main purposes:</p>
+            <List>
               <li>
                 provided resources to help guide learning on data analytics,
                 coding, professional and personal development, and freelancing
@@ -43,14 +47,16 @@ export default function Home({ allPostsData }) {
               </li>
             </List>
             <p>
-              From this platform I want women of color to feel <strong>inspired</strong>,
-              <strong>encouraged</strong>, <strong>supported</strong>, and <strong>confident</strong> in pursuing a STEM career.{" "}
+              From this platform I want women of color to feel{" "}
+              <strong>inspired</strong>,<strong>encouraged</strong>,{" "}
+              <strong>supported</strong>, and <strong>confident</strong> in
+              pursuing a STEM career.{" "}
             </p>
           </Col>
         </Row>
       </section>
       <section className="my-3">
-      <h2>FEATURED STORIES</h2>
+        <h2>FEATURED STORIES</h2>
         <Container>
           <Row>
             {allPostsData

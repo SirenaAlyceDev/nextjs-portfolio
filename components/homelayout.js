@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./homelayout.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
   Container,
@@ -54,7 +53,7 @@ export default function HomeLayout({ children }) {
       <Jumbotron className="text-left px-5" fluid>
         <Row>
           <Col className="align-self-center">
-            <h1 className="display-3">Hi, I'm Sirena Alyce.</h1>
+            <h1 className="display-3">Sirena Alyce.</h1>
             <p className="font-weight-bold">
               Freelance Full-Stack Web Developer & Data Analyst
             </p>
