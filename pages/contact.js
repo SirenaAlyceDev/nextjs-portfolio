@@ -1,6 +1,8 @@
 import ContactLayout from "../components/contactlayout"
 import ContactForm from "../components/contact"
-import { Container } from "reactstrap";
+import { Container } from "reactstrap"
+import Head from "next/head"
+
 export default function Contact() {
   return (
     <>
