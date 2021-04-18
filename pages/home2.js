@@ -41,7 +41,10 @@ const useStyles = makeStyles({
     backdropFilter: 'blur( 4px )',
     borderRadius: 10,
     border: '1px solid rgba( 255, 255, 255, 0.18 )',
-  }
+  },
+  fullHeightCard: {
+    height:"100%"
+  },
 })
 
 
@@ -118,7 +121,7 @@ export default function HomePage2() {
         </Typography>
         <Grid container spacing={1}>
           <Grid item xs={12} sm={6}>
-            <Card>
+            <Card className={classes.fullHeightCard}>
               <CardActionArea>
                 <CardMedia
                   image="images/development.svg"
@@ -180,7 +183,7 @@ export default function HomePage2() {
             </Card>
           </Grid>
           <Grid item xs={12} sm={6}>
-            <Card>
+            <Card className={classes.fullHeightCard}>
               <CardActionArea>
                 <CardMedia
                   image="images/development.svg"
