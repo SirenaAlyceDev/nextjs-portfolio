@@ -241,7 +241,7 @@ export default function HomePage2() {
       </Typography>
       <Grid container spacing={2}>
         <Grid item xs={4}>
-          <Card>
+          <Card className={classes.card}>
             <Grid container spacing={2}>
               <Grid item xs={4}>
                 <CardMedia>
@@ -272,7 +272,7 @@ export default function HomePage2() {
           </Card>
         </Grid>
         <Grid item xs={4}>
-          <Card>
+          <Card className={classes.card}>
             <Grid container spacing={2}>
               <Grid item xs={4}>
                 <CardMedia>
@@ -303,7 +303,7 @@ export default function HomePage2() {
           </Card>
         </Grid>
         <Grid item xs={4}>
-          <Card>
+          <Card className={classes.card}>
             <Grid container spacing={2}>
               <Grid item xs={4}>
                 <CardMedia>
