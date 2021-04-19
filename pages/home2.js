@@ -238,7 +238,7 @@ export default function HomePage2() {
         </Grid>
       </div>
       <Typography variant="h2" gutterBottom>
-        My Work
+        My Projects
       </Typography>
       <Grid container spacing={2}>
         <Grid item xs={4}>
