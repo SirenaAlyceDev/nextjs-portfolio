@@ -49,6 +49,7 @@ const useStyles = makeStyles({
     backdropFilter: "blur( 4px )",
     borderRadius: 10,
     border: "1px solid rgba( 255, 255, 255, 0.18 )",
+    padding: "10px"
   },
   fullHeightCard: {
     height: "100%",
