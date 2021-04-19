@@ -36,24 +36,27 @@ import {
 const useStyles = makeStyles({
   /* background by SVGBackgrounds.com */
   root: {
-    backgroundColor: "#f64c71",
-    backgroundImage: 'url("/images/Rose-Petals.svg")',
+    // backgroundColor: "#f64c71",
+    // backgroundImage: 'url("/images/Rose-Petals.svg")',
+    background:"#fff",
+    backgroundImage: 'radial-gradient(circle, #ffffff, #f1e4fb, #efc5ee, #f4a4d5, #f980b1, #f167a1, #e84b91, #df2581, #c6058f, #a4019d, #7616a9, #2126b2)',
+    // backgroundImage: 'radial-gradient(circle, #f64c71, #e62f7d, #cf108a, #b00098, #870fa5, #740b94, #610783, #4f0372, #4a004b, #39032c, #230616, #000000)',
     backgroundAttachment: "fixed",
     backgroundSize: "cover",
     backdropFilter: "blur( 4px )",
     padding: "20px",
   },
   card: {
-    background: "rgba( 255, 255, 255, 0.75 )",
+    background: "rgba( 255, 255, 255, 0.35 )",
     boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
     backdropFilter: "blur( 4px )",
     borderRadius: 10,
     border: "1px solid rgba( 255, 255, 255, 0.18 )",
-    padding: "10px"
+    padding: "10px",
   },
   fullHeightCard: {
     height: "100%",
-    background: "rgba( 255, 255, 255, 0.75 )",
+    background: "rgba( 255, 255, 255, 0.35 )",
     boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
     backdropFilter: "blur( 4px )",
     borderRadius: 10,
@@ -130,110 +133,82 @@ export default function HomePage2() {
         </Typography>
         <Grid container spacing={1}>
           <Grid item xs={12} sm={6}>
-            <Card className={classes.fullHeightCard}>
-              <CardActionArea>
-                <CardMedia
-                  image="images/development.svg"
-                  title="Full Stack Development"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
-                    Full Stack Development
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    I enjoy creating and bringing ideas to life.
-                  </Typography>
-                  <Typography variant="h6" gutterBottom>
-                    Languages:{" "}
-                  </Typography>
-                  <Typography gutterBottom variant="body2">
-                    HTML, CSS, JS, Sass, Python, SQL
-                  </Typography>
-                  <Typography variant="h6" gutterBottom>
-                    Dev Tools:{" "}
-                  </Typography>
-                  <Typography gutterBottom variant="body2">
-                    <List>
-                      <ListItem>
-                        <ListItemText primary="Bootstrap" />
-                      </ListItem>
-                      <ListItem>
-                        <ListItemText primary="Reactstrap" />
-                      </ListItem>
-                      <ListItem>
-                        <ListItemText primary="Material UI" />
-                      </ListItem>
-                      <ListItem>
-                        <ListItemText primary="NextJs" />
-                      </ListItem>
-                      <ListItem>
-                        <ListItemText primary="ReactJS" />
-                      </ListItem>
-                      <ListItem>
-                        <ListItemText primary="React Native" />
-                      </ListItem>
-                      <ListItem>
-                        <ListItemText primary="Node" />
-                      </ListItem>
-                      <ListItem>
-                        <ListItemText primary="Express" />
-                      </ListItem>
-                      <ListItem>
-                        <ListItemText primary="MongoDB" />
-                      </ListItem>
-                    </List>
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
+            <Typography gutterBottom variant="h5" component="h2">
+              Full Stack Development
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              I enjoy creating and bringing ideas to life.
+            </Typography>
+            <Typography variant="h6" gutterBottom>
+              Languages:{" "}
+            </Typography>
+            <Typography gutterBottom variant="body2">
+              HTML, CSS, JS, Sass, Python, SQL
+            </Typography>
+            <Typography variant="h6" gutterBottom>
+              Dev Tools:{" "}
+            </Typography>
+            <Typography gutterBottom variant="body2">
+              <List>
+                <ListItem>
+                  <ListItemText primary="Bootstrap" />
+                </ListItem>
+                <ListItem>
+                  <ListItemText primary="Reactstrap" />
+                </ListItem>
+                <ListItem>
+                  <ListItemText primary="Material UI" />
+                </ListItem>
+                <ListItem>
+                  <ListItemText primary="NextJs" />
+                </ListItem>
+                <ListItem>
+                  <ListItemText primary="ReactJS" />
+                </ListItem>
+                <ListItem>
+                  <ListItemText primary="React Native" />
+                </ListItem>
+                <ListItem>
+                  <ListItemText primary="Node" />
+                </ListItem>
+                <ListItem>
+                  <ListItemText primary="Express" />
+                </ListItem>
+                <ListItem>
+                  <ListItemText primary="MongoDB" />
+                </ListItem>
+              </List>
+            </Typography>
           </Grid>
           <Grid item xs={12} sm={6}>
-            <Card className={classes.fullHeightCard}>
-              <CardActionArea>
-                <CardMedia
-                  image="images/development.svg"
-                  title="Full Stack Development"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
-                    Data Management
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    component="p"
-                  >
-                    Data tells a story and can create change.
-                  </Typography>
-                  <Typography variant="h6" gutterBottom>
-                    Analytic Tools:{" "}
-                  </Typography>
-                  <Typography gutterBottom variant="body2">
-                    SAS & Python
-                  </Typography>
-                  <Typography variant="h6" gutterBottom>
-                    Dev Tools:{" "}
-                  </Typography>
-                  <Typography gutterBottom variant="body2">
-                    <List>
-                      <ListItem>
-                        <ListItemText primary="5+ years of experience in Public Health" />
-                      </ListItem>
-                      <ListItem>
-                        <ListItemText
-                          primary="4+ years of experience in statistical programming &
+            <Typography gutterBottom variant="h5" component="h2">
+              Data Management
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              Data tells a story and can create change.
+            </Typography>
+            <Typography variant="h6" gutterBottom>
+              Analytic Tools:{" "}
+            </Typography>
+            <Typography gutterBottom variant="body2">
+              SAS & Python
+            </Typography>
+            <Typography variant="h6" gutterBottom>
+              Dev Tools:{" "}
+            </Typography>
+            <Typography gutterBottom variant="body2">
+              <List>
+                <ListItem>
+                  <ListItemText primary="5+ years of experience in Public Health" />
+                </ListItem>
+                <ListItem>
+                  <ListItemText
+                    primary="4+ years of experience in statistical programming &
                             data management"
-                        />
-                      </ListItem>
-                    </List>
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>{" "}
+                  />
+                </ListItem>
+              </List>
+            </Typography>
           </Grid>
         </Grid>
       </div>
