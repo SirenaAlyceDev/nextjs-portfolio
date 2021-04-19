@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from "@material-ui/core/styles";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
   Container,
@@ -17,6 +17,7 @@ import {
   CardContent,
   CardMedia,
   Button,
+  Paper,
 } from "@material-ui/core";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import InstagramIcon from "@material-ui/icons/Instagram";
@@ -30,30 +31,41 @@ import {
   NavItem,
   NavLink,
 } from "reactstrap";
+// import BackgroundImg from '/images/Rose-Petals.svg'
 
 const useStyles = makeStyles({
+  /* background by SVGBackgrounds.com */
   root: {
-    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)'
+    backgroundColor: "#f64c71",
+    backgroundImage: 'url("/images/Rose-Petals.svg")',
+    backgroundAttachment: "fixed",
+    backgroundSize: "cover",
+    backdropFilter: "blur( 4px )",
+    padding: "20px",
   },
   card: {
-    background: 'rgba( 255, 255, 255, 0.75 )',
-    boxShadow: '0 8px 32px 0 rgba( 31, 38, 135, 0.37 )',
-    backdropFilter: 'blur( 4px )',
+    background: "rgba( 255, 255, 255, 0.75 )",
+    boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
+    backdropFilter: "blur( 4px )",
     borderRadius: 10,
-    border: '1px solid rgba( 255, 255, 255, 0.18 )',
+    border: "1px solid rgba( 255, 255, 255, 0.18 )",
   },
   fullHeightCard: {
-    height:"100%"
+    height: "100%",
+    background: "rgba( 255, 255, 255, 0.75 )",
+    boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
+    backdropFilter: "blur( 4px )",
+    borderRadius: 10,
+    border: "1px solid rgba( 255, 255, 255, 0.18 )",
   },
-})
-
+});
 
 export default function HomePage2() {
   const classes = useStyles();
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
   return (
-    <Container className={classes.root}>
+    <Container disableGutters maxWidth={false} className={classes.root}>
       <Navbar color="dark" expand="md">
         <NavbarBrand href="/home">SirenaAlyce</NavbarBrand>
         <NavbarToggler onClick={toggle} />
@@ -83,10 +95,6 @@ export default function HomePage2() {
           </Nav>
         </Collapse>
       </Navbar>
-      {/* <Typography
-        component="div"
-        style={{ backgroundColor: "#cfe8fc", height: "100vh" }}
-      /> */}
       <div>
         <Grid container spacing={1}>
           <Grid item xs={12} sm={6}>
@@ -231,109 +239,98 @@ export default function HomePage2() {
       <Typography variant="h2" gutterBottom>
         My Work
       </Typography>
-      <Grid container spacing={1}>
-        <Grid item xs={12} sm={3}>
-          <Card className={classes.card}>
-            <div>
-              <CardContent>
-                <Typography component="h5" variant="h5">
-                  Live From Space
-                </Typography>
-                <Typography variant="subtitle1" color="textSecondary">
-                  Mac Miller
-                </Typography>
-                <Button size="small" color="primary" disabled>
-                  In Progress
-                </Button>
-                <Button>
-                  <Link href="https://github.com/SirenaAlyceDev/react-budget">
-                    <a className="project-link">GitHub Repo</a>
-                  </Link>
-                </Button>
-              </CardContent>
-            </div>
-            <CardMedia
-              image="/images/BWordLogo.png"
-              title="The B Word Web App"
-            />
+      <Grid container spacing={2}>
+        <Grid item xs={4}>
+          <Card>
+            <Grid container spacing={2}>
+              <Grid item xs={4}>
+                <CardMedia>
+                  <img alt="bword" src="/images/BWordLogo.png" />
+                </CardMedia>
+              </Grid>
+              <Grid item xs={7} sm container>
+                <Grid item xs container direction="column" spacing={2}>
+                  <CardContent>
+                    <Typography component="h5" variant="h5">
+                      Live From Space
+                    </Typography>
+                    <Typography variant="subtitle1" color="textSecondary">
+                      Mac Miller
+                    </Typography>
+                    <Button size="small" color="primary" disabled>
+                      In Progress
+                    </Button>
+                    <Button>
+                      <Link href="https://github.com/SirenaAlyceDev/react-budget">
+                        <a className="project-link">GitHub Repo</a>
+                      </Link>
+                    </Button>
+                  </CardContent>
+                </Grid>
+              </Grid>
+            </Grid>
           </Card>
         </Grid>
-        <Grid item xs={12} sm={3}>
-          <Card className={classes.card}>
-            <div>
-              <CardContent>
-                <Typography component="h5" variant="h5">
-                  Live From Space
-                </Typography>
-                <Typography variant="subtitle1" color="textSecondary">
-                  Mac Miller
-                </Typography>
-                <Button size="small" color="primary" disabled>
-                  In Progress
-                </Button>
-                <Button>
-                  <Link href="https://github.com/SirenaAlyceDev/react-budget">
-                    <a className="project-link">GitHub Repo</a>
-                  </Link>
-                </Button>
-              </CardContent>
-            </div>
-            <CardMedia
-              image="/images/BWordLogo.png"
-              title="The B Word Web App"
-            />
+        <Grid item xs={4}>
+          <Card>
+            <Grid container spacing={2}>
+              <Grid item xs={4}>
+                <CardMedia>
+                  <img alt="bword" src="/images/BWordLogo.png" />
+                </CardMedia>
+              </Grid>
+              <Grid item xs={7} sm container>
+                <Grid item xs container direction="column" spacing={2}>
+                  <CardContent>
+                    <Typography component="h5" variant="h5">
+                      Live From Space
+                    </Typography>
+                    <Typography variant="subtitle1" color="textSecondary">
+                      Mac Miller
+                    </Typography>
+                    <Button size="small" color="primary" disabled>
+                      In Progress
+                    </Button>
+                    <Button>
+                      <Link href="https://github.com/SirenaAlyceDev/react-budget">
+                        <a className="project-link">GitHub Repo</a>
+                      </Link>
+                    </Button>
+                  </CardContent>
+                </Grid>
+              </Grid>
+            </Grid>
           </Card>
         </Grid>
-        <Grid item xs={12} sm={3}>
-          <Card className={classes.card}>
-            <div>
-              <CardContent>
-                <Typography component="h5" variant="h5">
-                  Live From Space
-                </Typography>
-                <Typography variant="subtitle1" color="textSecondary">
-                  Mac Miller
-                </Typography>
-                <Button size="small" color="primary" disabled>
-                  In Progress
-                </Button>
-                <Button>
-                  <Link href="https://github.com/SirenaAlyceDev/react-budget">
-                    <a className="project-link">GitHub Repo</a>
-                  </Link>
-                </Button>
-              </CardContent>
-            </div>
-            <CardMedia
-              image="/images/BWordLogo.png"
-              title="The B Word Web App"
-            />
-          </Card>
-        </Grid>
-        <Grid item xs={12} sm={3}>
-          <Card className={classes.card}>
-            <div>
-              <CardContent>
-                <Typography component="h5" variant="h5">
-                  Live From Space
-                </Typography>
-                <Typography variant="subtitle1" color="textSecondary">
-                  Mac Miller
-                </Typography>
-                <Button size="small" color="primary" disabled>
-                  In Progress
-                </Button>
-                <Button>
-                  <Link href="https://github.com/SirenaAlyceDev/react-budget">
-                    <a className="project-link">GitHub Repo</a>
-                  </Link>
-                </Button>
-              </CardContent>
-            </div>
-            <CardMedia
-              image="/images/BWordLogo.png"
-              title="The B Word Web App"
-            />
+        <Grid item xs={4}>
+          <Card>
+            <Grid container spacing={2}>
+              <Grid item xs={4}>
+                <CardMedia>
+                  <img alt="bword" src="/images/BWordLogo.png" />
+                </CardMedia>
+              </Grid>
+              <Grid item xs={7} sm container>
+                <Grid item xs container direction="column" spacing={2}>
+                  <CardContent>
+                    <Typography component="h5" variant="h5">
+                      Live From Space
+                    </Typography>
+                    <Typography variant="subtitle1" color="textSecondary">
+                      Mac Miller
+                    </Typography>
+                    <Button size="small" color="primary" disabled>
+                      In Progress
+                    </Button>
+                    <Button>
+                      <Link href="https://github.com/SirenaAlyceDev/react-budget">
+                        <a className="project-link">GitHub Repo</a>
+                      </Link>
+                    </Button>
+                  </CardContent>
+                </Grid>
+              </Grid>
+            </Grid>
           </Card>
         </Grid>
       </Grid>
