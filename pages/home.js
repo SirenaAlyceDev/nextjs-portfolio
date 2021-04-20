@@ -1,30 +1,82 @@
-import React from "react";
-import Head from "next/head";
-import HomeLayout from "../components/homelayout";
+import React, { useState } from "react";
 import { getSortedPostsData } from "../lib/posts";
+import Head from "next/head";
 import Link from "next/link";
+import { makeStyles } from "@material-ui/core/styles";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
-  Row,
-  Col,
   Container,
-  CardImg,
-  CardSubtitle,
-  CardTitle,
-  CardText,
-  CardBody,
-  List,
-} from "reactstrap";
-import Grid from "@material-ui/core/Grid";
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import Button from "@material-ui/core/Button";
+  Card,
+  Typography,
+  Grid,
+  Avatar,
+  CardContent,
+  CardMedia,
+  Button,
+  CardActions,
+  Box,
+} from "@material-ui/core";
+import TwitterIcon from "@material-ui/icons/Twitter";
+import InstagramIcon from "@material-ui/icons/Instagram";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import IconButton from "@material-ui/core/IconButton";
+import Header from "../components/header";
+import Footer from "../components/footer";
+
+const useStyles = makeStyles((theme) => ({
+  /* background by SVGBackgrounds.com */
+  root: {
+    padding: "80px",
+  },
+  hero: {
+    marginBottom: "40px",
+  },
+  avatar: {
+    marginBottom: "10px",
+    width: theme.spacing(7),
+    height: theme.spacing(7),
+  },
+  headline: {
+    fontWeight: "bolder",
+    marginBottom: "10px",
+  },
+  subheadline: {
+    marginBottom: "10px",
+  },
+  icons: {
+    marginRight: "10px",
+    fontSize: "16px",
+  },
+  projecs: {
+    marginBottom: "50px",
+  },
+  toolsdiv: {
+    marginTop: "15px",
+  },
+  tools: {
+    marginRight: "5px",
+    fontSize: "10px",
+    borderRadius: "15px",
+    marginBottom: "5px",
+  },
+  card: {
+    height: "100%",
+    background: "rgba( 255, 255, 255, 0.35 )",
+    boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
+    backdropFilter: "blur( 4px )",
+    borderRadius: 10,
+    border: "1px solid rgba( 255, 255, 255, 0.18 )",
+    padding: "10px",
+  },
+  image: {
+    maxWidth: "100%",
+    display: "block",
+  },
+}));
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
+  console.log(allPostsData)
   return {
     props: {
       allPostsData,
@@ -32,194 +84,369 @@ export async function getStaticProps() {
   };
 }
 
-export default function HomePage({ allPostsData }) {
+// getStaticProps()
+
+
+export default function Home({ allPostsData }) {
+  const classes = useStyles();
   return (
     <>
-      <HomeLayout>
-        <Head>
-          <meta
-            name="viewport"
-            content="minimum-scale=1, initial-scale=1, width=device-width"
-          />
-          <title>
-            Sirena Alyce | Data Analyst | FullStack Developer | Atlanta, GA
-          </title>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <Container>
-          <Row className="my-3">
-            <Col>
-              <h2 className="text-center">Specializing In</h2>
-              <Row className="text-center">
-                <Grid container spacing={2}>
-                  <Grid className="m-3 text-center" item component={Card} md>
-                    <CardImg
-                      src="images/development.svg"
-                      height={64}
-                      width={64}
-                      alt="Full Stack Developer"
-                    />
-                    <CardBody>
-                      <CardTitle>
-                        <h4>Full Stack Developer</h4>
-                      </CardTitle>
-                      <CardText>
-                        I enjoy creating and bringing ideas to life.
-                      </CardText>
-                      <CardSubtitle>
-                        <h6>Languages:</h6>
-                      </CardSubtitle>
-                      <CardText>HTML, CSS, JS, Sass, Python, SQL</CardText>
-                      <CardSubtitle>
-                        <h6>Dev Tools:</h6>
-                      </CardSubtitle>
-                      <CardText>
-                        <List type="unstyled">
-                          <li className="my-1">Bootstrap</li>
-                          <li className="my-1">Reactstrap</li>
-                          <li className="my-1">Material UI</li>
-                          <li className="my-1">ReactJS</li>
-                          <li className="my-1">React Native</li>
-                          <li className="my-1">Node</li>
-                          <li className="my-1">Express</li>
-                          <li className="my-1">MongoDB</li>
-                        </List>
-                      </CardText>
-                    </CardBody>
-                  </Grid>
-                  <Grid className="m-3 text-center" item component={Card} md>
-                    <CardImg
-                      src="/images/dashboard.svg"
-                      height={64}
-                      width={64}
-                      alt="Data Analyst"
-                    />
-                    <CardBody>
-                      <CardTitle>
-                        <h4>Data Analyst</h4>
-                      </CardTitle>
-                      <CardText>
-                        <p>Data tells a story and can create change.</p>
-                      </CardText>
-                      <CardSubtitle>
-                        <h6>Analytic Tools:</h6>
-                      </CardSubtitle>
-                      <CardText>
-                        <p>SAS & Python</p>
-                      </CardText>
-                      <CardSubtitle>
-                        <h6>Experience:</h6>
-                      </CardSubtitle>
-                      <CardText>
-                        <List type="unstyled">
-                          <li className="my-1">
-                            5+ years of experience in Public Health
-                          </li>
-                          <li className="my-1">
-                            4+ years of experience in statistical programming &
-                            data management
-                          </li>
-                        </List>
-                      </CardText>
-                    </CardBody>
-                  </Grid>
-                </Grid>
-              </Row>
-            </Col>
-          </Row>
-          <Row className="my-3 text-center">
-            <Col>
-              <h2 className="text-center">My Projects</h2>
-              <p>Here are a few projects that I have designed and built</p>
-              <Row>
-                <Grid container spacing={2}>
-                  <Grid item component={Card} className="project-card m-3 " md>
-                    <CardActionArea>
-                      <CardMedia
-                        component="img"
-                        height="300"
-                        image="/images/BWordLogo.png"
-                        title="The B Word"
-                      />{" "}
-                      <CardContent>
-                        <h4>The B-Word (Web App)</h4>
-                        <p>
-                          A simple budgeting tool to help you determine your
-                          long-term financial goals, save money, and eliminate
-                          debt.
-                        </p>
-                        <h6>Tools:</h6>
-                        <p>ReactJS, Bootstrap, Reactstrap, Material UI</p>{" "}
-                      </CardContent>
-                    </CardActionArea>
-                    <CardActions>
-                      <Button size="small" color="primary" disabled>
-                        In Progress
-                      </Button>
-                      <Button>
-                        <Link href="https://github.com/SirenaAlyceDev/react-budget">
-                          <a className="project-link">GitHub Repo</a>
-                        </Link>
-                      </Button>
-                    </CardActions>
-                  </Grid>
-                  <Grid item component={Card} className="project-card m-3" md>
-                    <CardActionArea>
-                      <CardMedia
-                        component="img"
-                        height="300"
-                        image="/images/BWordLogo.png"
-                        title="The B Word"
-                      />
-                      <CardContent>
-                        <h4>The B-Word (Mobile App)</h4>
-                        <p>
-                          A simple budgeting tool to help you determine your
-                          long-term financial goals, save money, and eliminate
-                          debt.
-                        </p>
-                        <h6>Tools:</h6>
-                        <p>React Native, Bootstrap, Reactstrap, Material UI</p>
-                      </CardContent>
-                    </CardActionArea>
-                    <CardActions>
-                      <Button size="small" color="primary" disabled>
-                        In Progress
-                      </Button>
-                      <Button>
-                        <Link href="https://github.com/SirenaAlyceDev/react-native">
-                          <a className="project-link">GitHub Repo</a>
-                        </Link>
-                      </Button>
-                    </CardActions>
-                  </Grid>
-                </Grid>
-              </Row>
-            </Col>
-          </Row>
-          <Card className="my-5 w-100 p-3 work-with-me">
-            <Col>
-              <Row>
-                <Col>
-                  <h2 className="work-with-me-header text-center">
-                    Work With Me
-                  </h2>
-                </Col>
-              </Row>
-              <Row>
-                <Col className="text-center">
-                  <p>Interested in working together? We should chat.</p>
-                  <Link href="/contact" className="btn home-button">
-                    <a className="btn" role="button">
-                      Let's Connect!
-                    </a>
+      <Head>
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width"
+        />
+        <title>
+          Sirena Alyce | Data Analyst | FullStack Developer | Atlanta, GA
+        </title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Header />
+      <Container disableGutters maxWidth={false} className={classes.root}>
+        <div className={classes.hero}>
+          <Grid container spacing={1}>
+            <Grid item xs={12} sm={6}>
+              <Avatar
+                alt="Sirena Alyce"
+                src="images/profile.jpg"
+                className={classes.avatar}
+              />{" "}
+              <Typography variant="subtitle2" gutterBottom>
+                SIRENA ALYCE
+              </Typography>
+              <Typography
+                variant="h5"
+                className={classes.headline}
+                gutterBottom
+              >
+                I am a freelance full-stack web developer. I build unique,
+                purpose driven, functional web and mobile apps.
+              </Typography>
+              <Typography
+                variant="body2"
+                className={classes.subheadline}
+                gutterBottom
+              >
+                Lover of all things <strong>data and development</strong>,{" "}
+                <strong>tech</strong> enthusiast, self-proclaimed{" "}
+                <strong>forever learner</strong>,{" "}
+                <strong>problem solver and goal-setter</strong>, dog lover,{" "}
+                <strong>Black Woman</strong>, curiosity is my middle name.
+              </Typography>
+              <Typography variant="body2" gutterBottom>
+                <IconButton>
+                  <Link href="https://twitter/sirenaalyce">
+                    <TwitterIcon className={classes.icons} />
                   </Link>
-                </Col>
-              </Row>
-            </Col>
-          </Card>
-        </Container>
-      </HomeLayout>
+                </IconButton>
+                <IconButton>
+                  <Link href="https://instagram.com/sirenaalyce.io">
+                    <InstagramIcon className={classes.icons} />
+                  </Link>
+                </IconButton>
+                <IconButton>
+                  <Link href="https://github.com/SirenaAlyceDev/react-budget">
+                    <GitHubIcon className={classes.icons} />
+                  </Link>
+                </IconButton>
+              </Typography>
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <Box
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                p={5}
+                m={5}
+              >
+                <img
+                  src="/images/example-3.png"
+                  alt="illustration by IRA Design"
+                />
+              </Box>
+            </Grid>
+          </Grid>
+        </div>
+        <div className={classes.projecs}>
+          <Typography variant="h4" gutterBottom>
+            My Projects
+          </Typography>
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={4}>
+              <Card className={classes.card}>
+                <Grid container spacing={2}>
+                  <Grid item xs={4}>
+                    <CardMedia>
+                      <img
+                        alt="bword"
+                        src="/images/BWordLogo.png"
+                        className={classes.image}
+                      />
+                    </CardMedia>
+                  </Grid>
+                  <Grid item xs={7} sm container>
+                    <Grid item xs container direction="column" spacing={2}>
+                      <CardContent>
+                        <Typography component="h6" variant="h5">
+                          SirenaAlyce.com
+                        </Typography>
+                        <div className={classes.toolsdiv}>
+                          <Button
+                            variant="contained"
+                            size="small"
+                            color="primary"
+                            className={classes.tools}
+                          >
+                            NextJs
+                          </Button>
+                          <Button
+                            variant="contained"
+                            size="small"
+                            color="primary"
+                            className={classes.tools}
+                          >
+                            Boostrap
+                          </Button>
+                          <Button
+                            variant="contained"
+                            size="small"
+                            color="primary"
+                            className={classes.tools}
+                          >
+                            Reactstrap
+                          </Button>
+                          <Button
+                            variant="contained"
+                            size="small"
+                            color="primary"
+                            className={classes.tools}
+                          >
+                            Material UI
+                          </Button>
+                          <Button
+                            variant="contained"
+                            size="small"
+                            color="primary"
+                            className={classes.tools}
+                          >
+                            Netlify
+                          </Button>
+                        </div>
+
+                        <CardActions>
+                          <Button size="small" color="primary" disabled>
+                            In Progress
+                          </Button>
+                          <Button>
+                            <Link href="https://github.com/SirenaAlyceDev/">
+                              <a className="project-link">GitHub Repo</a>
+                            </Link>
+                          </Button>
+                        </CardActions>
+                      </CardContent>
+                    </Grid>
+                  </Grid>
+                </Grid>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <Card className={classes.card}>
+                <Grid container spacing={2}>
+                  <Grid item xs={4}>
+                    <CardMedia>
+                      <img
+                        alt="bword"
+                        src="/images/BWordLogo.png"
+                        className={classes.image}
+                      />
+                    </CardMedia>
+                  </Grid>
+                  <Grid item xs={7} sm container>
+                    <Grid item xs container direction="column" spacing={2}>
+                      <CardContent>
+                        <Typography component="h6" variant="h5">
+                          The B-Word (Web & Mobile App)
+                        </Typography>
+                        <div className={classes.toolsdiv}>
+                          <Button
+                            variant="contained"
+                            size="small"
+                            color="primary"
+                            className={classes.tools}
+                          >
+                            React Native
+                          </Button>
+                          <Button
+                            variant="contained"
+                            size="small"
+                            color="primary"
+                            className={classes.tools}
+                          >
+                            Boostrap
+                          </Button>
+                          <Button
+                            variant="contained"
+                            size="small"
+                            color="primary"
+                            className={classes.tools}
+                          >
+                            Reactstrap
+                          </Button>
+                          <Button
+                            variant="contained"
+                            size="small"
+                            color="primary"
+                            className={classes.tools}
+                          >
+                            Material UI
+                          </Button>
+                        </div>
+                        <CardActions>
+                          <Button size="small" color="primary" disabled>
+                            In Progress
+                          </Button>
+                          <Button>
+                            <Link href="https://github.com/SirenaAlyceDev/react-budget">
+                              <a className="project-link">GitHub Repo</a>
+                            </Link>
+                          </Button>
+                        </CardActions>
+                      </CardContent>
+                    </Grid>
+                  </Grid>
+                </Grid>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <Card className={classes.card}>
+                <Grid container spacing={2}>
+                  <Grid item xs={4}>
+                    <CardMedia>
+                      <img
+                        alt="bword"
+                        src="/images/BWordLogo.png"
+                        className={classes.image}
+                      />
+                    </CardMedia>
+                  </Grid>
+                  <Grid item xs={7} sm container>
+                    <Grid item xs container direction="column" spacing={2}>
+                      <CardContent>
+                        <Typography component="h5" variant="h5">
+                          Seekaty Job Board App
+                        </Typography>
+                        <div className={classes.toolsdiv}>
+                          <Button
+                            variant="contained"
+                            size="small"
+                            color="primary"
+                            className={classes.tools}
+                          >
+                            React
+                          </Button>
+                          <Button
+                            variant="contained"
+                            size="small"
+                            color="primary"
+                            className={classes.tools}
+                          >
+                            Reactstrap
+                          </Button>
+                          <Button
+                            variant="contained"
+                            size="small"
+                            color="primary"
+                            className={classes.tools}
+                          >
+                            Material UI
+                          </Button>
+                          <Button
+                            variant="contained"
+                            size="small"
+                            color="primary"
+                            className={classes.tools}
+                          >
+                            MongoDB
+                          </Button>{" "}
+                          <Button
+                            variant="contained"
+                            size="small"
+                            color="primary"
+                            className={classes.tools}
+                          >
+                            Express
+                          </Button>{" "}
+                          <Button
+                            variant="contained"
+                            size="small"
+                            color="primary"
+                            className={classes.tools}
+                          >
+                            Node
+                          </Button>
+                          <Button
+                            variant="contained"
+                            size="small"
+                            color="primary"
+                            className={classes.tools}
+                          >
+                            Heroku
+                          </Button>
+                          <Button
+                            variant="contained"
+                            size="small"
+                            color="primary"
+                            className={classes.tools}
+                          >
+                            Netlify
+                          </Button>
+                        </div>
+
+                        <CardActions>
+                          <Button size="small" color="primary" disabled>
+                            In Progress
+                          </Button>
+                          <Button>
+                            <Link href="https://affectionate-shirley-7cd6bb.netlify.app/">
+                              <a className="project-link">Website</a>
+                            </Link>
+                          </Button>
+                        </CardActions>
+                      </CardContent>
+                    </Grid>
+                  </Grid>
+                </Grid>
+              </Card>
+            </Grid>
+          </Grid>
+        </div>
+        <div>
+          <Typography variant="h4" gutterBottom>
+            What's New? Blog and News
+          </Typography>
+          <section>
+            <h2>Blog</h2>
+
+            {/* {allPostsData
+              .filter((posts) => posts["featured"] === true)
+              .map(({ id, date, title, image, extra }) => (
+                <>
+                  <Col>
+                    <Link href={`/posts/${id}`}>
+                      <a>{title}</a>
+                    </Link>
+                    <br />
+                    <small>
+                      <Date dateString={date} />
+                    </small>
+                  </Col>
+                  <Col>image goes here</Col>
+                </>
+              ))} */}
+          </section>
+        </div>
+      </Container>
+      <Footer />
     </>
   );
 }

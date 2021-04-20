@@ -29,8 +29,6 @@ export default function Home({ allPostsData }) {
       </Head>
       <section>
         <Row>
-          {console.log(allPostsData)}
-
           <Col>
             <p>
               Women of color continue to be underrepresented in STEM careers

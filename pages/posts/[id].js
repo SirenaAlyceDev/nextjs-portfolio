@@ -1,8 +1,6 @@
-import BlogLayout from '../../components/bloglayout'
 import { getAllPostIds, getPostData } from '../../lib/posts'
 import Head from 'next/head'
 import Date from '../../components/date'
-import utilStyles from '../../styles/utils.module.css'
 import Link from 'next/link'
 import { Container } from 'reactstrap'
 
