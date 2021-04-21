@@ -1,5 +1,5 @@
 import ContactLayout from "../components/contactlayout"
-import ContactForm from "../components/contact"
+import ContactForm from "../components/contactform"
 import { Container } from "reactstrap"
 import Head from "next/head"
 

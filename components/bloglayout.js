@@ -16,6 +16,7 @@ import {
   NavLink,
 } from "reactstrap";
 import Footer from "./footer";
+import Header from './header'
 
 const blogTitle = "Techincolr.";
 const siteTitle = "Sirena Alyce | Data Analyst | FullStack Developer | Atlanta";
@@ -26,35 +27,7 @@ export default function BlogLayout({ children, home }) {
 
   return (
     <>
-      <Navbar color="dark" dark expand="md">
-        <NavbarBrand href="/home">SirenaAlyce</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav navbar className="ml-auto">
-            <NavItem>
-              <NavLink href="/">
-                <a>Home</a>
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/blog">
-                <a>Blog</a>
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/contact">
-                <a>Contact</a>
-              </NavLink>
-            </NavItem>
-            {/* <Link>Shop</Link> */}
-            <NavItem>
-              <NavLink href="https://www.buymeacoffee.com/sirenaalyce">
-                <a>Buy Me a Coffee!</a>
-              </NavLink>
-            </NavItem>
-          </Nav>
-        </Collapse>
-      </Navbar>
+   <Header />
       <Jumbotron fluid className="text-left px-5">
           <Row>
             <Col>
