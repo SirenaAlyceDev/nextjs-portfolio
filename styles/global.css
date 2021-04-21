@@ -23,9 +23,26 @@
 
 */
 /* 
-font-family: 'Montserrat', sans-serif;
-font-family: 'Playfair Display', serif; 
+font-family: 'Karla', sans-serif;
+font-family: 'Rubik', sans-serif;
 */
-/* <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display&display=swap" rel="stylesheet"></link> */
 
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap');
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Rubik', sans-serif !important;
+}
+
+p {
+    font-family: 'Karla', sans-serif !important;
+}
+
+a.nav-link, a.navbar-brand {
+    color: #2126B2 !important;
+    font-family: 'Karla', sans-serif;
+}
+
+a {
+    font-family: 'Karla', sans-serif;
+  
+}

@@ -1,38 +1,68 @@
 import React, { useState } from "react";
 import Head from "next/head";
 import "bootstrap/dist/css/bootstrap.min.css";
-import {
-  Container,
-  Row,
-  Col,
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  Jumbotron,
-} from "reactstrap";
+import { makeStyles } from "@material-ui/core/styles";
 import Footer from "./footer";
 import Header from "./header";
+import { Grid, Typography, Container } from "@material-ui/core";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    backgroundImage: "url(images/Wave-100s-1447px.png)",
+    backgroundAttachment: "fixed",
+    backgroundSize: "cover",
+    marginBottom:"20px"
+
+  },
+  jumbotron: {
+    padding: "50px",
+    marginBottom: "20px",
+  },
+  jumbotronheader: {
+    fontWeight: "400",
+    textAlign: "left",
+  },
+  jumbotronsub: {
+    color: "#2126B2",
+  },
+  content: {
+    paddingLeft: "80px",
+    paddingRight: "80px",
+    marginBottom: "40px",
+  },
+}));
 
 export default function ContactLayout({ children }) {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => setIsOpen(!isOpen);
+  const classes = useStyles();
+
   return (
     <>
-      <Header />
-      <Jumbotron className="px-5" fluid>
-        <Row>
-          <Col className="align-self-center">
-            <h1 className="display-3">Let's Connect!</h1>
-            <p className="lead">
-              I want to work with you. Tell me more about your project.
-            </p>
-          </Col>
-        </Row>
-      </Jumbotron>
+      <Grid container maxWidth={false} className={classes.root}>
+      <Grid item xs={12}>
+          <Header />
+        </Grid>
+        <Grid item xs={12}>
+          <Grid container spacing={1} className={classes.jumbotron}>
+            <Grid item xs={12}>
+              <Typography
+                variant="h1"
+                component="h2"
+                className={classes.jumbotronheader}
+                gutterBottom
+              >
+                Let's Connect!
+              </Typography>
+              <Typography
+                variant="body1"
+                className={classes.jumbotronsub}
+                gutterBottom
+              >
+                I want to work with you. Tell me more about your project.
+              </Typography>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
       <Container>
         <Head>
           <link rel="icon" href="/favicon.ico" />

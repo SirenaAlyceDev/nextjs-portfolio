@@ -6,8 +6,13 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   card: {
-    padding: "20px",
-    marginBottom: "10px"
+    padding: "40px",
+    marginBottom: "10px",
+    background: "rgba( 255, 255, 255, 0.35 )",
+    boxShadow: "0 8px 32px 0 rgba( 33,38,178, 0.37 )",
+    backdropFilter: "blur( 4px )",
+    borderRadius: 10,
+    border: "1px solid rgba( 255, 255, 255, 0.18 )",
   }
 }));
 

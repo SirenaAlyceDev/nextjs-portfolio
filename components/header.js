@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import {
-    Container,
-    Row,
-    Col,
     Collapse,
     Navbar,
     NavbarToggler,
@@ -14,7 +11,9 @@ import {
   import { makeStyles } from "@material-ui/core/styles";
 
   const useStyles = makeStyles((theme) => ({
-
+    nav: {
+      backgroundColor:"transparent"
+    }
 
   }));
 
@@ -23,7 +22,7 @@ import {
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
     return (
-        <Navbar light  expand="md">
+        <Navbar light className="bg-transparent" expand="md" >
           <NavbarBrand href="/home">SirenaAlyce</NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>

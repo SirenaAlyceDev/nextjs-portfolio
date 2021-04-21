@@ -1,10 +1,12 @@
-import Head from "next/head"
-import BlogLayout from "../components/bloglayout"
-import { getSortedPostsData } from "../lib/posts"
-import Link from "next/link"
-import Date from "../components/date"
-import "bootstrap/dist/css/bootstrap.min.css"
-import { Container, Row, Col, List } from "reactstrap"
+import Head from "next/head";
+import BlogLayout from "../components/bloglayout";
+import { getSortedPostsData } from "../lib/posts";
+import Link from "next/link";
+import Date from "../components/date";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Container, Row, Col, List } from "reactstrap";
+import { makeStyles } from "@material-ui/core/styles";
+import { Typography } from "@material-ui/core";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -15,7 +17,25 @@ export async function getStaticProps() {
   };
 }
 
+const useStyles = makeStyles((theme) => ({
+  posttitle: {
+    color: "#2126B2",
+    fontSize: "32px",
+    fontWeight: "bold"
+  },
+  bloglink: {
+    color: "#f64c71"
+  },
+  emphasis: {
+    fontWeight: "bold",
+    color: "#2126B2",
+    textShadow: "2px 2px 5px #f64c71"
+  },
+}));
+
 export default function Home({ allPostsData }) {
+  const classes = useStyles();
+
   return (
     <BlogLayout home>
       <Head>
@@ -31,7 +51,7 @@ export default function Home({ allPostsData }) {
         <Row>
           <Col>
             <p>
-              Women of color continue to be underrepresented in STEM careers
+              Women of color continue to be underrepresented in STEM careers.
             </p>
             <p>This blog has two main purposes:</p>
             <List>
@@ -46,15 +66,17 @@ export default function Home({ allPostsData }) {
             </List>
             <p>
               From this platform I want women of color to feel{" "}
-              <strong>inspired</strong>,<strong>encouraged</strong>,{" "}
-              <strong>supported</strong>, and <strong>confident</strong> in
+              <strong className={classes.emphasis}>inspired</strong>,<strong className={classes.emphasis}>encouraged</strong>,{" "}
+              <strong className={classes.emphasis}>supported</strong>, and <strong className={classes.emphasis}>confident</strong> in
               pursuing a STEM career.{" "}
             </p>
           </Col>
         </Row>
       </section>
       <section className="my-3">
-        <h2>FEATURED STORIES</h2>
+        <Typography variant="h2" component="h2" className={classes.posttitle} gutterBottom>
+          FEATURED STORIES
+        </Typography>
         <Container>
           <Row>
             {allPostsData
@@ -63,7 +85,7 @@ export default function Home({ allPostsData }) {
                 <>
                   <Col>
                     <Link href={`/posts/${id}`}>
-                      <a>{title}</a>
+                      <a className={classes.bloglink}>{title}</a>
                     </Link>
                     <br />
                     <small>
@@ -78,7 +100,9 @@ export default function Home({ allPostsData }) {
       </section>
       {/* the layout stuff is populating here from the layout component */}
       <section className="my-3">
-        <h2>MORE STORIES</h2>
+      <Typography variant="h2" component="h2" className={classes.posttitle} gutterBottom>
+        MORE STORIES
+        </Typography>
         <Container>
           <Row>
             {allPostsData
@@ -86,7 +110,7 @@ export default function Home({ allPostsData }) {
               .map(({ id, date, title, image, extra }) => (
                 <Col xs="6">
                   <Link href={`/posts/${id}`}>
-                    <a>{title}</a>
+                    <a className={classes.bloglink}>{title}</a>
                   </Link>
                   <br />
                   <small>

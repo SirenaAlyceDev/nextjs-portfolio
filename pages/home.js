@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { getSortedPostsData } from "../lib/posts";
 import Head from "next/head";
 import Link from "next/link";
@@ -27,12 +27,15 @@ import Footer from "../components/footer";
 const useStyles = makeStyles((theme) => ({
   /* background by https://loading.io/background/m-wave/ */
   root: {
-    padding: "80px",
+    // padding: "80px",
     backgroundImage: "url(images/Wave-100s-1447px.png)",
     backgroundAttachment: "fixed",
     backgroundSize: "cover",
   },
   hero: {
+    paddingRight: "80px",
+    paddingLeft: "80px",
+    paddingTop: "80px",
     marginBottom: "40px",
   },
   heroimg: {
@@ -52,10 +55,13 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "10px",
   },
   icons: {
-    marginRight: "10px",
+    // marginRight: "5px",
     fontSize: "16px",
+    color: "#2126b2"
   },
-  projecs: {
+  projects: {
+    paddingRight: "80px",
+    paddingLeft: "80px",
     marginBottom: "50px",
   },
   toolsdiv: {
@@ -70,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
   card: {
     height: "100%",
     background: "rgba( 255, 255, 255, 0.35 )",
-    boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
+    boxShadow: "0 8px 32px 0 rgba( 33,38,178, 0.37 )",
     backdropFilter: "blur( 4px )",
     borderRadius: 10,
     border: "1px solid rgba( 255, 255, 255, 0.18 )",
@@ -80,6 +86,15 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "100%",
     display: "block",
   },
+  emphasis: {
+    fontWeight: "bold",
+    color: "#2126B2",
+    textShadow: "2px 2px 5px #f64c71"
+  },
+  blog: {
+    paddingRight: "80px",
+    paddingLeft: "80px",
+    }
 }));
 
 export async function getStaticProps() {
@@ -108,8 +123,8 @@ export default function Home({ allPostsData }) {
         </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
       <Container disableGutters maxWidth={false} className={classes.root}>
+      <Header />
         <div className={classes.hero}>
           <Grid container spacing={1}>
             <Grid item xs={12} sm={6}>
@@ -134,11 +149,11 @@ export default function Home({ allPostsData }) {
                 className={classes.subheadline}
                 gutterBottom
               >
-                Lover of all things <strong>data and development</strong>,{" "}
-                <strong>tech</strong> enthusiast, self-proclaimed{" "}
-                <strong>forever learner</strong>,{" "}
-                <strong>problem solver and goal-setter</strong>, dog lover,{" "}
-                <strong>Black Woman</strong>, curiosity is my middle name.
+                Lover of all things <strong className={classes.emphasis}>data and development</strong>,{" "}
+                <strong className={classes.emphasis}>tech</strong> enthusiast, self-proclaimed{" "}
+                <strong className={classes.emphasis}>forever learner</strong>,{" "}
+                <strong className={classes.emphasis}>problem solver and goal-setter</strong>, dog lover,{" "}
+                <strong className={classes.emphasis}>Black Woman</strong>, curiosity is my middle name.
               </Typography>
               <Typography variant="body2" gutterBottom>
                 <IconButton>
@@ -178,7 +193,7 @@ export default function Home({ allPostsData }) {
 
           </Grid>
         </div>
-        <div className={classes.projecs}>
+        <div className={classes.projects}>
           <Typography variant="h4" gutterBottom>
             My Projects
           </Typography>
@@ -431,7 +446,7 @@ export default function Home({ allPostsData }) {
             </Grid>
           </Grid>
         </div>
-        <div>
+        <div className={classes.blog}>
           <Typography variant="h4" gutterBottom>
             What's New? Blog and News
           </Typography>
