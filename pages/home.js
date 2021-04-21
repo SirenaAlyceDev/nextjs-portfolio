@@ -94,6 +94,9 @@ const useStyles = makeStyles((theme) => ({
   blog: {
     paddingRight: "80px",
     paddingLeft: "80px",
+    },
+    cardlink: {
+      color: "#f64c71"
     }
 }));
 
@@ -265,7 +268,7 @@ export default function Home({ allPostsData }) {
                           </Button>
                           <Button>
                             <Link href="https://github.com/SirenaAlyceDev/">
-                              <a className="project-link">GitHub Repo</a>
+                              <a className={classes.cardlink}>GitHub Repo</a>
                             </Link>
                           </Button>
                         </CardActions>
@@ -333,7 +336,7 @@ export default function Home({ allPostsData }) {
                           </Button>
                           <Button>
                             <Link href="https://github.com/SirenaAlyceDev/react-budget">
-                              <a className="project-link">GitHub Repo</a>
+                              <a className={classes.cardlink}>GitHub Repo</a>
                             </Link>
                           </Button>
                         </CardActions>
@@ -434,7 +437,7 @@ export default function Home({ allPostsData }) {
                           </Button>
                           <Button>
                             <Link href="https://affectionate-shirley-7cd6bb.netlify.app/">
-                              <a className="project-link">Website</a>
+                              <a className={classes.cardlink}>Website</a>
                             </Link>
                           </Button>
                         </CardActions>
