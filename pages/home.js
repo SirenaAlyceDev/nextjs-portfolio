@@ -158,7 +158,7 @@ export default function Home({ allPostsData }) {
                 </IconButton>
               </Typography>
             </Grid>
-            <Hidden smDown>
+            <Hidden xsDown>
             <Grid item xs={12} sm={6}>
               <Box
                 display="flex"
