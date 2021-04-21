@@ -1,10 +1,10 @@
-import Head from "next/head";
-import BlogLayout from "../components/bloglayout";
-import { getSortedPostsData } from "../lib/posts";
-import Link from "next/link";
-import Date from "../components/date";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Row, Col, List } from "reactstrap";
+import Head from "next/head"
+import BlogLayout from "../components/bloglayout"
+import { getSortedPostsData } from "../lib/posts"
+import Link from "next/link"
+import Date from "../components/date"
+import "bootstrap/dist/css/bootstrap.min.css"
+import { Container, Row, Col, List } from "reactstrap"
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();

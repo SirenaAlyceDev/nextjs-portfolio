@@ -15,6 +15,7 @@ import {
   Button,
   CardActions,
   Box,
+  Hidden
 } from "@material-ui/core";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import InstagramIcon from "@material-ui/icons/Instagram";
@@ -24,12 +25,18 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 
 const useStyles = makeStyles((theme) => ({
-  /* background by SVGBackgrounds.com */
+  /* background by https://loading.io/background/m-wave/ */
   root: {
     padding: "80px",
+    backgroundImage: "url(images/Wave-100s-1447px.png)",
+    backgroundAttachment: "fixed",
+    backgroundSize: "cover",
   },
   hero: {
     marginBottom: "40px",
+  },
+  heroimg: {
+    filter: "drop-shadow(5px 5px 5px #666666)",
   },
   avatar: {
     marginBottom: "10px",
@@ -39,6 +46,7 @@ const useStyles = makeStyles((theme) => ({
   headline: {
     fontWeight: "bolder",
     marginBottom: "10px",
+    color: "#2126b2",
   },
   subheadline: {
     marginBottom: "10px",
@@ -76,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
-  console.log(allPostsData)
+  console.log(allPostsData);
   return {
     props: {
       allPostsData,
@@ -85,7 +93,6 @@ export async function getStaticProps() {
 }
 
 // getStaticProps()
-
 
 export default function Home({ allPostsData }) {
   const classes = useStyles();
@@ -119,8 +126,8 @@ export default function Home({ allPostsData }) {
                 className={classes.headline}
                 gutterBottom
               >
-                I am a freelance full-stack web developer. I build unique,
-                purpose driven, functional web and mobile apps.
+                I am a full-stack web developer. I build unique, purpose driven,
+                functional web and mobile apps.
               </Typography>
               <Typography
                 variant="body2"
@@ -151,6 +158,7 @@ export default function Home({ allPostsData }) {
                 </IconButton>
               </Typography>
             </Grid>
+            <Hidden smDown>
             <Grid item xs={12} sm={6}>
               <Box
                 display="flex"
@@ -160,11 +168,14 @@ export default function Home({ allPostsData }) {
                 m={5}
               >
                 <img
+                  className={classes.heroimg}
                   src="/images/example-3.png"
                   alt="illustration by IRA Design"
                 />
               </Box>
             </Grid>
+            </Hidden>
+
           </Grid>
         </div>
         <div className={classes.projecs}>
@@ -425,8 +436,6 @@ export default function Home({ allPostsData }) {
             What's New? Blog and News
           </Typography>
           <section>
-            <h2>Blog</h2>
-
             {/* {allPostsData
               .filter((posts) => posts["featured"] === true)
               .map(({ id, date, title, image, extra }) => (
