@@ -1,7 +1,7 @@
-import React from "react";
-import { getSortedPostsData } from "../lib/posts";
+// import React from "react";
 import Head from "next/head";
 import Link from "next/link";
+import { getSortedPostsData } from "../lib/posts";
 import { makeStyles } from "@material-ui/core/styles";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
@@ -15,7 +15,7 @@ import {
   Button,
   CardActions,
   Box,
-  Hidden
+  Hidden,
 } from "@material-ui/core";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import InstagramIcon from "@material-ui/icons/Instagram";
@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
   icons: {
     // marginRight: "5px",
     fontSize: "16px",
-    color: "#2126b2"
+    color: "#2126b2",
   },
   projects: {
     paddingRight: "80px",
@@ -89,30 +89,29 @@ const useStyles = makeStyles((theme) => ({
   emphasis: {
     fontWeight: "bold",
     color: "#2126B2",
-    textShadow: "2px 2px 5px #f64c71"
+    textShadow: "2px 2px 5px #f64c71",
   },
   blog: {
     paddingRight: "80px",
     paddingLeft: "80px",
-    },
-    cardlink: {
-      color: "#f64c71"
-    }
+  },
+  cardlink: {
+    color: "#f64c71",
+  },
 }));
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
-  console.log(allPostsData);
   return {
     props: {
       allPostsData,
     },
-  };
+  }
 }
-
 // getStaticProps()
 
 export default function Home({ allPostsData }) {
+  console.log(allPostsData)
   const classes = useStyles();
   return (
     <>
@@ -127,7 +126,7 @@ export default function Home({ allPostsData }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container disableGutters maxWidth={false} className={classes.root}>
-      <Header />
+        <Header />
         <div className={classes.hero}>
           <Grid container spacing={1}>
             <Grid item xs={12} sm={6}>
@@ -152,11 +151,19 @@ export default function Home({ allPostsData }) {
                 className={classes.subheadline}
                 gutterBottom
               >
-                Lover of all things <strong className={classes.emphasis}>data and development</strong>,{" "}
-                <strong className={classes.emphasis}>tech</strong> enthusiast, self-proclaimed{" "}
+                Lover of all things{" "}
+                <strong className={classes.emphasis}>
+                  data and development
+                </strong>
+                , <strong className={classes.emphasis}>tech</strong> enthusiast,
+                self-proclaimed{" "}
                 <strong className={classes.emphasis}>forever learner</strong>,{" "}
-                <strong className={classes.emphasis}>problem solver and goal-setter</strong>, dog lover,{" "}
-                <strong className={classes.emphasis}>Black Woman</strong>, curiosity is my middle name.
+                <strong className={classes.emphasis}>
+                  problem solver and goal-setter
+                </strong>
+                , dog lover,{" "}
+                <strong className={classes.emphasis}>Black Woman</strong>,
+                curiosity is my middle name.
               </Typography>
               <Typography variant="body2" gutterBottom>
                 <IconButton>
@@ -177,23 +184,22 @@ export default function Home({ allPostsData }) {
               </Typography>
             </Grid>
             <Hidden xsDown>
-            <Grid item xs={12} sm={6}>
-              <Box
-                display="flex"
-                justifyContent="center"
-                alignItems="center"
-                p={5}
-                m={5}
-              >
-                <img
-                  className={classes.heroimg}
-                  src="/images/example-3.png"
-                  alt="illustration by IRA Design"
-                />
-              </Box>
-            </Grid>
+              <Grid item xs={12} sm={6}>
+                <Box
+                  display="flex"
+                  justifyContent="center"
+                  alignItems="center"
+                  p={5}
+                  m={5}
+                >
+                  <img
+                    className={classes.heroimg}
+                    src="/images/example-3.png"
+                    alt="illustration by IRA Design"
+                  />
+                </Box>
+              </Grid>
             </Hidden>
-
           </Grid>
         </div>
         <div className={classes.projects}>
@@ -454,6 +460,15 @@ export default function Home({ allPostsData }) {
             What's New? Blog and News
           </Typography>
           <section>
+            {/* {allPostsData.map(({ id, date, title }) => (
+              <li key={id}>
+                {title}
+                <br />
+                {id}
+                <br />
+                {date}
+              </li>
+            ))} */}
             {/* {allPostsData
               .filter((posts) => posts["featured"] === true)
               .map(({ id, date, title, image, extra }) => (
@@ -477,3 +492,4 @@ export default function Home({ allPostsData }) {
     </>
   );
 }
+

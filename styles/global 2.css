@@ -1,0 +1,48 @@
+/* color scheme */
+/* #2126B2
+#553D67
+#f64c71
+#99738e
+#2f2fa2 
+
+#2126b2
+#4d21af
+#681bac
+#7d14a8
+#8f0ba3
+#a0029e
+#ae0099
+#bb0094
+#c7068e
+#d11389
+#da1f84
+#e32a7f
+#ea367a
+#f04175
+#f64c71
+
+*/
+/* 
+font-family: 'Karla', sans-serif;
+font-family: 'Rubik', sans-serif;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap');
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Rubik', sans-serif !important;
+}
+
+p {
+    font-family: 'Karla', sans-serif !important;
+}
+
+a.nav-link, a.navbar-brand {
+    color: #2126B2 !important;
+    font-family: 'Karla', sans-serif;
+}
+
+a {
+    font-family: 'Karla', sans-serif;
+  
+}

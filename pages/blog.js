@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Home({ allPostsData }) {
+export default function Blog({ allPostsData }) {
   const classes = useStyles();
 
   return (
