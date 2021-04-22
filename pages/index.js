@@ -60,6 +60,11 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "16px",
     color: "#2126b2",
   },
+  button: {
+    backgroundColor: "#2126B2",
+    color: "#fff",
+    borderRadius: "10px",
+  },
   projects: {
     paddingRight: "80px",
     paddingLeft: "80px",
@@ -173,6 +178,13 @@ export default function HomePage({ allPostsData }) {
                 <strong className={classes.emphasis}>Black Woman</strong>,
                 curiosity is my middle name.
               </Typography>
+              <Button
+                variant="contained"
+                className={classes.button}
+                href="/contact"
+              >
+                Work With Me!
+              </Button>
               <Typography variant="body2" gutterBottom>
                 <IconButton>
                   <Link href="https://twitter/sirenaalyce">
@@ -221,7 +233,7 @@ export default function HomePage({ allPostsData }) {
                   <Grid item xs={4}>
                     <CardMedia>
                       <img
-                      height="auto"
+                        height="auto"
                         alt="bword"
                         src="/images/sirenaalyce.png"
                         className={classes.image}
@@ -295,7 +307,7 @@ export default function HomePage({ allPostsData }) {
             </Grid>
             <Grid item xs={12} sm={4}>
               <Card className={classes.card}>
-              <Grid container display="flex" alignItems="center" spacing={2}>
+                <Grid container display="flex" alignItems="center" spacing={2}>
                   <Grid item xs={4}>
                     <CardMedia>
                       <img
@@ -363,7 +375,7 @@ export default function HomePage({ allPostsData }) {
             </Grid>
             <Grid item xs={12} sm={4}>
               <Card className={classes.card}>
-              <Grid container display="flex" alignItems="center" spacing={2}>
+                <Grid container display="flex" alignItems="center" spacing={2}>
                   <Grid item xs={4}>
                     <CardMedia>
                       <img
@@ -467,8 +479,8 @@ export default function HomePage({ allPostsData }) {
           <Grid container display="flex" alignItems="center" spacing={1}>
             <Grid item xs={12} sm={4}>
               <Typography variant="h4" gutterBottom>
-                What's New? 
-                <br/>
+                What's New?
+                <br />
                 Blog and News
               </Typography>
             </Grid>
@@ -479,10 +491,10 @@ export default function HomePage({ allPostsData }) {
                   <Grid item xs={12} className={classes.posts}>
                     <Card className={classes.card}>
                       <CardContent>
-                      <Typography variant="h5">
-                        <Link href={`/posts/${id}`}>
-                          <a className={classes.bloglink}>{title}</a>
-                        </Link>
+                        <Typography variant="h5">
+                          <Link href={`/posts/${id}`}>
+                            <a className={classes.bloglink}>{title}</a>
+                          </Link>
                         </Typography>
                         <br />
                         <small>

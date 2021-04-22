@@ -1,7 +1,14 @@
 import React from "react";
 import Send from "@material-ui/icons/Send";
 import { Form } from "reactstrap";
-import { Container, Input, TextField, Button, Grid, Card } from "@material-ui/core";
+import {
+  Container,
+  Input,
+  TextField,
+  Button,
+  Grid,
+  Card,
+} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
@@ -13,7 +20,12 @@ const useStyles = makeStyles((theme) => ({
     backdropFilter: "blur( 4px )",
     borderRadius: 10,
     border: "1px solid rgba( 255, 255, 255, 0.18 )",
-  }
+  },
+  button: {
+    backgroundColor: "#2126B2",
+    color: "#fff",
+    borderRadius: "10px",
+  },
 }));
 
 export default function ContactForm() {
@@ -29,58 +41,54 @@ export default function ContactForm() {
         action="/success"
       >
         <Card className={classes.card}>
-        <Grid container spacing={2}>
-          <Input
-              type="hidden"
-              name="form-name"
-              value="contact"
-            />
-          <Grid item xs={12}>
-          <TextField
-              required
-              name="firstname"
-              id="firstname"
-              label="First Name"
-              variant="outlined"
-              className="my-2"
-              fullWidth
-            />
+          <Grid container spacing={2}>
+            <Input type="hidden" name="form-name" value="contact" />
+            <Grid item xs={12}>
+              <TextField
+                required
+                name="firstname"
+                id="firstname"
+                label="First Name"
+                variant="outlined"
+                className="my-2"
+                fullWidth
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                required
+                name="lastname"
+                id="lastname"
+                label="Last Name"
+                variant="outlined"
+                className="my-2"
+                fullWidth
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                required
+                name="email"
+                id="email"
+                label="Email"
+                variant="outlined"
+                fullWidth
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                required
+                name="message"
+                id="message"
+                label="Message"
+                rows={5}
+                variant="outlined"
+                multiline
+                className="my-2"
+                fullWidth
+              />
+            </Grid>
           </Grid>
-          <Grid item xs={12}>
-          <TextField
-              required
-              name="lastname"
-              id="lastname"
-              label="Last Name"
-              variant="outlined"
-              className="my-2"
-              fullWidth
-            />
-            </Grid>
-            <Grid item xs={12}>
-            <TextField
-              required
-              name="email"
-              id="email"
-              label="Email"
-              variant="outlined"
-              fullWidth
-            />
-            </Grid>
-            <Grid item xs={12}>
-            <TextField
-              required
-              name="message"
-              id="message"
-              label="Message"
-              rows={5}
-              variant="outlined"
-              multiline
-              className="my-2"
-              fullWidth
-            />
-            </Grid>
-        </Grid>
         </Card>
 
         {/* <Row>
@@ -134,14 +142,14 @@ export default function ContactForm() {
         </Row> */}
         <div data-netlify-recaptcha="true"></div>
         <Button
-        type="submit"
-        variant="contained"
-        color="primary"
-        endIcon={<Send />}
-        className="contact-button"
-      >
-        Send
-      </Button>
+          type="submit"
+          variant="contained"
+          color="primary"
+          endIcon={<Send />}
+          className={classes.button}
+        >
+          Send
+        </Button>
       </Form>
     </Container>
   );
