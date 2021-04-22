@@ -180,6 +180,7 @@ export default function HomePage({ allPostsData }) {
               </Typography>
               <Button
                 variant="contained"
+                color="primary"
                 className={classes.button}
                 href="/contact"
               >
