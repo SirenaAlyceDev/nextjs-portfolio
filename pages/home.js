@@ -111,6 +111,8 @@ export async function getStaticProps() {
 // getStaticProps()
 
 export default function Home({ allPostsData }) {
+  console.log(allPostsData)
+
   const classes = useStyles();
   return (
     <>
@@ -462,7 +464,7 @@ export default function Home({ allPostsData }) {
           {allPostsData
               .slice(0, 2)
               .map(({ id, date, title, image, extra }) => (
-                <div>
+                <div xs="6">
                   <Link href={`/posts/${id}`}>
                     <a className={classes.bloglink}>{title}</a>
                   </Link>
