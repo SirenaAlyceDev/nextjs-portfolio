@@ -1,4 +1,4 @@
-// import React from "react";
+import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { getSortedPostsData } from "../lib/posts";
@@ -106,12 +106,11 @@ export async function getStaticProps() {
     props: {
       allPostsData,
     },
-  }
+  };
 }
 // getStaticProps()
 
 export default function Home({ allPostsData }) {
-  console.log(allPostsData)
   const classes = useStyles();
   return (
     <>
@@ -460,31 +459,19 @@ export default function Home({ allPostsData }) {
             What's New? Blog and News
           </Typography>
           <section>
-            {/* {allPostsData.map(({ id, date, title }) => (
-              <li key={id}>
-                {title}
-                <br />
-                {id}
-                <br />
-                {date}
-              </li>
-            ))} */}
-            {/* {allPostsData
-              .filter((posts) => posts["featured"] === true)
+          {allPostsData
+              .slice(0, 2)
               .map(({ id, date, title, image, extra }) => (
-                <>
-                  <Col>
-                    <Link href={`/posts/${id}`}>
-                      <a>{title}</a>
-                    </Link>
-                    <br />
-                    <small>
-                      <Date dateString={date} />
-                    </small>
-                  </Col>
-                  <Col>image goes here</Col>
-                </>
-              ))} */}
+                <div>
+                  <Link href={`/posts/${id}`}>
+                    <a className={classes.bloglink}>{title}</a>
+                  </Link>
+                  <br />
+                  <small>
+                    <Date dateString={date} />
+                  </small>
+                </div>
+              ))}
           </section>
         </div>
       </Container>

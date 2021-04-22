@@ -1,3 +1,4 @@
+import React from 'react'
 import ContactLayout from "../components/contactlayout"
 import ContactForm from "../components/contactform"
 import { Container } from "reactstrap"

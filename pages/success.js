@@ -1,3 +1,4 @@
+import React from 'react'
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Row, Col, Container } from "reactstrap";
 import Link from "next/link";

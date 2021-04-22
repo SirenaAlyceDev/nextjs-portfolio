@@ -1,3 +1,4 @@
+import React from 'react'
 import Head from "next/head";
 import BlogLayout from "../components/bloglayout";
 import { getSortedPostsData } from "../lib/posts";
@@ -34,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Blog({ allPostsData }) {
+  console.log(allPostsData)
   const classes = useStyles();
 
   return (
