@@ -110,7 +110,7 @@ export async function getStaticProps() {
 }
 // getStaticProps()
 
-export default function Home({ allPostsData }) {
+export default function HomePage({ allPostsData }) {
   console.log(allPostsData)
 
   const classes = useStyles();
@@ -461,7 +461,7 @@ export default function Home({ allPostsData }) {
             What's New? Blog and News
           </Typography>
           <section>
-          {allPostsData
+          {/* {allPostsData
               .slice(0, 2)
               .map(({ id, date, title, image, extra }) => (
                 <div xs="6">
@@ -473,7 +473,7 @@ export default function Home({ allPostsData }) {
                     <Date dateString={date} />
                   </small>
                 </div>
-              ))}
+              ))} */}
           </section>
         </div>
       </Container>
