@@ -24,6 +24,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import IconButton from "@material-ui/core/IconButton";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import GoogleAnalytics from '../components/googleAnalytics.js'
 
 const useStyles = makeStyles((theme) => ({
   /* background by https://loading.io/background/m-wave/ */
@@ -129,14 +130,15 @@ export default function HomePage({ allPostsData }) {
   return (
     <>
       <Head>
-        <meta
+        <GoogleAnalytics />
+        {/* <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
         <title>
           Sirena Alyce | Data Analyst | FullStack Developer | Atlanta, GA
         </title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <Container disableGutters maxWidth={false} className={classes.root} home>
         <Header />
