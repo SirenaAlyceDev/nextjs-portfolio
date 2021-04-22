@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
     padding: "20px",
     marginTop: "10px",
     color: "#2126B2",
+    backgroundColor:"transparent",
   },
   socialgrid:{
     textAlign: 'right'

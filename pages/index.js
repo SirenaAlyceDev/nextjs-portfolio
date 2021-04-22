@@ -368,7 +368,7 @@ export default function HomePage({ allPostsData }) {
                     <CardMedia>
                       <img
                         alt="bword"
-                        src="/images/BWordLogo.png"
+                        src="/images/seekaty.png"
                         className={classes.image}
                       />
                     </CardMedia>
