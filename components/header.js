@@ -28,7 +28,7 @@ import {
           <Collapse isOpen={isOpen} navbar>
             <Nav navbar className="ml-auto">
               <NavItem>
-                <NavLink href="/">
+                <NavLink href="/home">
                   <a>Home</a>
                 </NavLink>
               </NavItem>
