@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
+import Date from "../components/date";
 import { getSortedPostsData } from "../lib/posts";
 import { makeStyles } from "@material-ui/core/styles";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -95,8 +96,14 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: "80px",
     paddingLeft: "80px",
   },
+  posts: {
+    marginBottom: "10px",
+  },
   cardlink: {
     color: "#f64c71",
+  },
+  bloglink: {
+    color: "#2126B2",
   },
 }));
 
@@ -111,7 +118,7 @@ export async function getStaticProps() {
 // getStaticProps()
 
 export default function HomePage({ allPostsData }) {
-  console.log(allPostsData)
+  console.log(allPostsData);
 
   const classes = useStyles();
   return (
@@ -126,7 +133,7 @@ export default function HomePage({ allPostsData }) {
         </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container disableGutters maxWidth={false} className={classes.root}>
+      <Container disableGutters maxWidth={false} className={classes.root} home>
         <Header />
         <div className={classes.hero}>
           <Grid container spacing={1}>
@@ -210,12 +217,13 @@ export default function HomePage({ allPostsData }) {
           <Grid container spacing={2}>
             <Grid item xs={12} sm={4}>
               <Card className={classes.card}>
-                <Grid container spacing={2}>
+                <Grid container display="flex" alignItems="center" spacing={2}>
                   <Grid item xs={4}>
                     <CardMedia>
                       <img
+                      height="auto"
                         alt="bword"
-                        src="/images/BWordLogo.png"
+                        src="/images/sirenaalyce.png"
                         className={classes.image}
                       />
                     </CardMedia>
@@ -287,7 +295,7 @@ export default function HomePage({ allPostsData }) {
             </Grid>
             <Grid item xs={12} sm={4}>
               <Card className={classes.card}>
-                <Grid container spacing={2}>
+              <Grid container display="flex" alignItems="center" spacing={2}>
                   <Grid item xs={4}>
                     <CardMedia>
                       <img
@@ -355,7 +363,7 @@ export default function HomePage({ allPostsData }) {
             </Grid>
             <Grid item xs={12} sm={4}>
               <Card className={classes.card}>
-                <Grid container spacing={2}>
+              <Grid container display="flex" alignItems="center" spacing={2}>
                   <Grid item xs={4}>
                     <CardMedia>
                       <img
@@ -437,7 +445,6 @@ export default function HomePage({ allPostsData }) {
                             Netlify
                           </Button>
                         </div>
-
                         <CardActions>
                           <Button size="small" color="primary" disabled>
                             In Progress
@@ -456,29 +463,40 @@ export default function HomePage({ allPostsData }) {
             </Grid>
           </Grid>
         </div>
-        <div className={classes.blog}>
-          <Typography variant="h4" gutterBottom>
-            What's New? Blog and News
-          </Typography>
-          <section>
-          {allPostsData
-              .slice(0, 2)
-              .map(({ id, date, title, image, extra }) => (
-                <div xs="6">
-                  <Link href={`/posts/${id}`}>
-                    <a className={classes.bloglink}>{title}</a>
-                  </Link>
-                  <br />
-                  <small>
-                    <Date dateString={date} />
-                  </small>
-                </div>
-              ))}
-          </section>
-        </div>
+        <Box className={classes.blog}>
+          <Grid container display="flex" alignItems="center" spacing={1}>
+            <Grid item xs={12} sm={4}>
+              <Typography variant="h4" gutterBottom>
+                What's New? 
+                <br/>
+                Blog and News
+              </Typography>
+            </Grid>
+            <Grid item xs={12} sm={8}>
+              {allPostsData
+                .slice(0, 2)
+                .map(({ id, date, title, image, extra }) => (
+                  <Grid item xs={12} className={classes.posts}>
+                    <Card className={classes.card}>
+                      <CardContent>
+                      <Typography variant="h5">
+                        <Link href={`/posts/${id}`}>
+                          <a className={classes.bloglink}>{title}</a>
+                        </Link>
+                        </Typography>
+                        <br />
+                        <small>
+                          <Date dateString={date} />
+                        </small>
+                      </CardContent>
+                    </Card>
+                  </Grid>
+                ))}
+            </Grid>
+          </Grid>
+        </Box>
       </Container>
       <Footer />
     </>
   );
 }
-

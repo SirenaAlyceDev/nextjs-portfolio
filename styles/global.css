@@ -20,19 +20,39 @@
 #ea367a
 #f04175
 #f64c71
+
+*/
+/* 
+font-family: 'Karla', sans-serif;
+font-family: 'Rubik', sans-serif;
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap');
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Rubik', sans-serif !important;
+}
 
+p {
+    font-family: 'Karla', sans-serif !important;
+}
 
+a.nav-link, a.navbar-brand {
+    color: #2126B2 !important;
+    font-family: 'Karla', sans-serif;
+}
 
+a {
+    font-family: 'Karla', sans-serif;
+  
+}
 
+a.makeStyles-bloglink-41:hover {
+    text-decoration: none;
+    color: #f64c71;
+}
 
-
-
-
-
-
-
-
-
+a.makeStyles-bloglink-2:hover {
+    text-decoration: none;
+    color: #2126B2;
+}

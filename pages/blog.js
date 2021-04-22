@@ -35,7 +35,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Blog({ allPostsData }) {
-  console.log(allPostsData)
   const classes = useStyles();
 
   return (

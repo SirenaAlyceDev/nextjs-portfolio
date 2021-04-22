@@ -12,7 +12,10 @@ import {
 
   const useStyles = makeStyles((theme) => ({
     nav: {
-      backgroundColor:"transparent"
+      backgroundColor:"transparent",
+    },
+    link: {
+      color: "#2126b2"
     }
 
   }));
@@ -34,18 +37,18 @@ import {
               </NavItem>
               <NavItem>
                 <NavLink href="/blog">
-                  <a>Blog</a>
+                <a>Blog</a>
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/contact">
-                  <a>Contact</a>
+                <a>Contact</a>
                 </NavLink>
               </NavItem>
               {/* <Link>Shop</Link> */}
               <NavItem>
                 <NavLink href="https://www.buymeacoffee.com/sirenaalyce">
-                  <a>Buy Me a Coffee!</a>
+                <a className={classes.link}>Buy Me a Coffee!</a>
                 </NavLink>
               </NavItem>
             </Nav>
