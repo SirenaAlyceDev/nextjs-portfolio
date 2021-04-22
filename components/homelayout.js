@@ -16,6 +16,7 @@ import {
   Jumbotron,
 } from "reactstrap";
 import Footer from "./footer";
+
 export default function HomeLayout({ children }) {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);

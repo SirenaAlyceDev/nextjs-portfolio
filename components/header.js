@@ -23,12 +23,12 @@ import {
     const toggle = () => setIsOpen(!isOpen);
     return (
         <Navbar light className="bg-transparent" expand="md" >
-          <NavbarBrand href="/home">SirenaAlyce</NavbarBrand>
+          <NavbarBrand href="/">SirenaAlyce</NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav navbar className="ml-auto">
               <NavItem>
-                <NavLink href="/home">
+                <NavLink href="/">
                   <a>Home</a>
                 </NavLink>
               </NavItem>
