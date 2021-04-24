@@ -1,15 +1,15 @@
-import React from 'react';
-import Document, { Html, Head, Main, NextScript } from 'next/document';
-import { ServerStyleSheets } from '@material-ui/core/styles';
-import theme from '../components/theme';
+import React from "react";
+import Document, { Html, Head, Main, NextScript } from "next/document";
+import { ServerStyleSheets } from "@material-ui/core/styles";
+import theme from "../components/theme";
 
 export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
         <Head>
-           {/* Global Site Tag (gtag.js) - Google Analytics */}
-           <script
+          {/* Global Site Tag (gtag.js) - Google Analytics */}
+          <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_ANALYTICS_ID}`}
           />
@@ -24,8 +24,11 @@ export default class MyDocument extends Document {
               page_path: window.location.pathname,
             });
           `,
-            }}          
+            }}
+          />
+
           {/* PWA primary color */}
+
           <meta name="theme-color" content={theme.palette.primary.main} />
           <link
             rel="stylesheet"
@@ -80,6 +83,9 @@ MyDocument.getInitialProps = async (ctx) => {
   return {
     ...initialProps,
     // Styles fragment is rendered after the app and page rendering finish.
-    styles: [...React.Children.toArray(initialProps.styles), sheets.getStyleElement()],
+    styles: [
+      ...React.Children.toArray(initialProps.styles),
+      sheets.getStyleElement(),
+    ],
   };
 };
