@@ -33,12 +33,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundAttachment: "fixed",
     backgroundSize: "cover",
   },
-  hero: {
-    paddingRight: "80px",
-    paddingLeft: "80px",
-    paddingTop: "80px",
-    marginBottom: "40px",
-  },
   heroimg: {
     filter: "drop-shadow(5px 5px 5px #666666)",
   },
@@ -64,11 +58,6 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#2126B2",
     color: "#fff",
     borderRadius: "10px",
-  },
-  projects: {
-    paddingRight: "80px",
-    paddingLeft: "80px",
-    marginBottom: "50px",
   },
   toolsdiv: {
     marginTop: "15px",
@@ -96,10 +85,6 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "bold",
     color: "#2126B2",
     textShadow: "2px 2px 5px #f64c71",
-  },
-  blog: {
-    paddingRight: "80px",
-    paddingLeft: "80px",
   },
   posts: {
     marginBottom: "10px",
@@ -140,6 +125,7 @@ export default function HomePage({ allPostsData }) {
       </Head>
       <Container disableGutters maxWidth={false} className={classes.root} home>
         <Header />
+        <Box p={2} m={2}>
         <div className={classes.hero}>
           <Grid container spacing={1}>
             <Grid item xs={12} sm={6}>
@@ -223,7 +209,9 @@ export default function HomePage({ allPostsData }) {
             </Hidden>
           </Grid>
         </div>
-        <div className={classes.projects}>
+        </Box>
+        <Box p={2} m={2}>
+        <div>
           <Typography variant="h4" gutterBottom>
             My Projects
           </Typography>
@@ -476,7 +464,8 @@ export default function HomePage({ allPostsData }) {
             </Grid>
           </Grid>
         </div>
-        <Box className={classes.blog}>
+        </Box>
+        <Box className={classes.blog} p={2} m={2}>
           <Grid container display="flex" alignItems="center" spacing={1}>
             <Grid item xs={12} sm={4}>
               <Typography variant="h4" gutterBottom>
