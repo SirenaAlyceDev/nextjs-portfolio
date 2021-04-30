@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { makeStyles } from "@material-ui/core/styles";
 import Footer from "./footer";
 import Header from "./header";
-import { Grid, Typography, Container } from "@material-ui/core";
+import { Grid, Typography, Container, Box } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -14,21 +14,15 @@ const useStyles = makeStyles((theme) => ({
     marginBottom:"20px"
 
   },
-  jumbotron: {
-    padding: "50px",
-    marginBottom: "20px",
-  },
   jumbotronheader: {
     fontWeight: "400",
     textAlign: "left",
+    [theme.breakpoints.down('xs')]: {
+      fontSize: "4rem"
+    },
   },
   jumbotronsub: {
     color: "#2126B2",
-  },
-  content: {
-    paddingLeft: "80px",
-    paddingRight: "80px",
-    marginBottom: "40px",
   },
 }));
 
@@ -41,6 +35,7 @@ export default function ContactLayout({ children }) {
       <Grid item xs={12}>
           <Header />
         </Grid>
+        <Box p={5}>
         <Grid item xs={12}>
           <Grid container spacing={1} className={classes.jumbotron}>
             <Grid item xs={12}>
@@ -62,6 +57,7 @@ export default function ContactLayout({ children }) {
             </Grid>
           </Grid>
         </Grid>
+        </Box>
       </Grid>
       <Container>
         <Head>

@@ -108,8 +108,6 @@ export async function getStaticProps() {
 // getStaticProps()
 
 export default function HomePage({ allPostsData }) {
-  console.log(allPostsData);
-
   const classes = useStyles();
   return (
     <>
@@ -478,7 +476,7 @@ export default function HomePage({ allPostsData }) {
               {allPostsData
                 .slice(0, 2)
                 .map(({ id, date, title, image, extra }) => (
-                  <Grid item xs={12} className={classes.posts}>
+                  <Grid item xs={12} className={classes.posts} key={id}>
                     <Card className={classes.card}>
                       <CardContent>
                         <Typography variant="h5">

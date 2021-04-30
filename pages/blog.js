@@ -84,7 +84,7 @@ export default function Blog({ allPostsData }) {
               .filter((posts) => posts["featured"] === true)
               .map(({ id, date, title, image, extra }) => (
                 <>
-                  <Col>
+                  <Col key={id}>
                     <Link href={`/posts/${id}`}>
                       <a className={classes.bloglink}>{title}</a>
                     </Link>
@@ -105,11 +105,11 @@ export default function Blog({ allPostsData }) {
         MORE STORIES
         </Typography>
         <Container>
-          <Row>
+          <Row >
             {allPostsData
               .slice(0, 2)
               .map(({ id, date, title, image, extra }) => (
-                <Col xs="6">
+                <Col xs="6" key={id}>
                   <Link href={`/posts/${id}`}>
                     <a className={classes.bloglink}>{title}</a>
                   </Link>
