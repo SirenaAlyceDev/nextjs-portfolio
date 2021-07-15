@@ -1,13 +1,13 @@
-import React from 'react'
-import ContactLayout from "../components/contactlayout"
-import ContactForm from "../components/contactform"
-import { Container } from "reactstrap"
-import Head from "next/head"
+import React from "react";
+import ContactLayout from "../components/contactlayout";
+import ContactForm from "../components/contactform";
+import { Container } from "reactstrap";
+import Head from "next/head";
 
 export default function Contact() {
   return (
     <>
-          <Head>
+      <Head>
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
@@ -18,7 +18,7 @@ export default function Contact() {
       </Head>
       <ContactLayout>
         <Container>
-        <ContactForm />
+          <ContactForm />
         </Container>
       </ContactLayout>
     </>

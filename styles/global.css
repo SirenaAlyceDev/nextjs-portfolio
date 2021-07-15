@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Rubik', sans-serif !important;
 }
 
-p {
+p, li, div.CookieConsent {
     font-family: 'Karla', sans-serif !important;
 }
 
@@ -44,7 +44,7 @@ a.nav-link, a.navbar-brand {
 
 a {
     font-family: 'Karla', sans-serif;
-  
+    color: #f64c71 !important;
 }
 
 a.makeStyles-bloglink-41:hover {
@@ -57,3 +57,6 @@ a.makeStyles-bloglink-2:hover {
     color: #2126B2;
 }
 
+#disqus_thread{
+    margin-top: 50px;
+}

@@ -22,6 +22,7 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import IconButton from "@material-ui/core/IconButton";
+import CookieConsent from "react-cookie-consent";
 import Header from "../components/header";
 import Footer from "../components/footer";
 
@@ -121,347 +122,362 @@ export default function HomePage({ allPostsData }) {
         </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container disableGutters maxWidth={false} className={classes.root} home>
+      <Container disableGutters maxWidth={false} className={classes.root}>
         <Header />
         <Box p={2} m={2}>
-        <div className={classes.hero}>
-          <Grid container spacing={1}>
-            <Grid item xs={12} sm={6}>
-              <Avatar
-                alt="Sirena Alyce"
-                src="images/profile.jpg"
-                className={classes.avatar}
-              />{" "}
-              <Typography variant="subtitle2" gutterBottom>
-                SIRENA ALYCE
-              </Typography>
-              <Typography
-                variant="h5"
-                className={classes.headline}
-                gutterBottom
-              >
-                I am a full-stack web developer. I build unique, purpose driven,
-                functional web and mobile apps.
-              </Typography>
-              <Typography
-                variant="body2"
-                className={classes.subheadline}
-                gutterBottom
-              >
-                Lover of all things{" "}
-                <strong className={classes.emphasis}>
-                  data and development
-                </strong>
-                , <strong className={classes.emphasis}>tech</strong> enthusiast,
-                self-proclaimed{" "}
-                <strong className={classes.emphasis}>forever learner</strong>,{" "}
-                <strong className={classes.emphasis}>
-                  problem solver and goal-setter
-                </strong>
-                , dog lover,{" "}
-                <strong className={classes.emphasis}>Black Woman</strong>,
-                curiosity is my middle name.
-              </Typography>
-              <Button
-                variant="contained"
-                color="primary"
-                className={classes.button}
-                href="/contact"
-              >
-                Work With Me!
-              </Button>
-              <Typography variant="body2" gutterBottom>
-                <IconButton>
-                  <Link href="https://twitter/sirenaalyce">
-                    <TwitterIcon className={classes.icons} />
-                  </Link>
-                </IconButton>
-                <IconButton>
-                  <Link href="https://instagram.com/sirenaalyce.io">
-                    <InstagramIcon className={classes.icons} />
-                  </Link>
-                </IconButton>
-                <IconButton>
-                  <Link href="https://github.com/SirenaAlyceDev/react-budget">
-                    <GitHubIcon className={classes.icons} />
-                  </Link>
-                </IconButton>
-              </Typography>
-            </Grid>
-            <Hidden xsDown>
+          <div className={classes.hero}>
+            <Grid container spacing={1}>
               <Grid item xs={12} sm={6}>
-                <Box
-                  display="flex"
-                  justifyContent="center"
-                  alignItems="center"
-                  p={5}
-                  m={5}
+                <Avatar
+                  alt="Sirena Alyce"
+                  src="images/profile.jpg"
+                  className={classes.avatar}
+                />{" "}
+                <Typography variant="subtitle2" gutterBottom>
+                  SIRENA ALYCE
+                </Typography>
+                <Typography
+                  variant="h5"
+                  className={classes.headline}
+                  gutterBottom
                 >
-                  <img
-                    className={classes.heroimg}
-                    src="/images/example-3.png"
-                    alt="illustration by IRA Design"
-                  />
-                </Box>
+                  I am a full-stack web developer. I build unique, purpose
+                  driven, functional web and mobile apps.
+                </Typography>
+                <Typography
+                  variant="body2"
+                  className={classes.subheadline}
+                  gutterBottom
+                >
+                  Lover of all things{" "}
+                  <strong className={classes.emphasis}>
+                    data and development
+                  </strong>
+                  , <strong className={classes.emphasis}>tech</strong>{" "}
+                  enthusiast, self-proclaimed{" "}
+                  <strong className={classes.emphasis}>forever learner</strong>,{" "}
+                  <strong className={classes.emphasis}>
+                    problem solver and goal-setter
+                  </strong>
+                  , dog lover,{" "}
+                  <strong className={classes.emphasis}>Black Woman</strong>,
+                  curiosity is my middle name.
+                </Typography>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  className={classes.button}
+                  href="/contact"
+                >
+                  Work With Me!
+                </Button>
+                <Typography variant="body2" gutterBottom>
+                  <IconButton>
+                    <Link href="https://twitter/sirenaalyce">
+                      <TwitterIcon className={classes.icons} />
+                    </Link>
+                  </IconButton>
+                  <IconButton>
+                    <Link href="https://instagram.com/sirenaalyce.io">
+                      <InstagramIcon className={classes.icons} />
+                    </Link>
+                  </IconButton>
+                  <IconButton>
+                    <Link href="https://github.com/SirenaAlyceDev/react-budget">
+                      <GitHubIcon className={classes.icons} />
+                    </Link>
+                  </IconButton>
+                </Typography>
               </Grid>
-            </Hidden>
-          </Grid>
-        </div>
+              <Hidden xsDown>
+                <Grid item xs={12} sm={6}>
+                  <Box
+                    display="flex"
+                    justifyContent="center"
+                    alignItems="center"
+                    p={5}
+                    m={5}
+                  >
+                    <img
+                      className={classes.heroimg}
+                      src="/images/example-3.png"
+                      alt="illustration by IRA Design"
+                    />
+                  </Box>
+                </Grid>
+              </Hidden>
+            </Grid>
+          </div>
         </Box>
         <Box p={2} m={2}>
-        <div>
-          <Typography variant="h4" gutterBottom>
-            My Projects
-          </Typography>
-          <Grid container spacing={2}>
-            <Grid item xs={12} sm={4}>
-              <Card className={classes.card}>
-                <Grid container display="flex" alignItems="center" spacing={2}>
-                  <Grid item xs={4}>
-                    <CardMedia>
-                      <img
-                        height="auto"
-                        alt="bword"
-                        src="/images/sirenaalyce.png"
-                        className={classes.image}
-                      />
-                    </CardMedia>
-                  </Grid>
-                  <Grid item xs={7} sm container>
-                    <Grid item xs container direction="column" spacing={2}>
-                      <CardContent>
-                        <Typography component="h6" variant="h5">
-                          SirenaAlyce.com
-                        </Typography>
-                        <div className={classes.toolsdiv}>
-                          <Button
-                            variant="contained"
-                            size="small"
-                            color="primary"
-                            className={classes.tools}
-                          >
-                            NextJs
-                          </Button>
-                          <Button
-                            variant="contained"
-                            size="small"
-                            color="primary"
-                            className={classes.tools}
-                          >
-                            Boostrap
-                          </Button>
-                          <Button
-                            variant="contained"
-                            size="small"
-                            color="primary"
-                            className={classes.tools}
-                          >
-                            Reactstrap
-                          </Button>
-                          <Button
-                            variant="contained"
-                            size="small"
-                            color="primary"
-                            className={classes.tools}
-                          >
-                            Material UI
-                          </Button>
-                          <Button
-                            variant="contained"
-                            size="small"
-                            color="primary"
-                            className={classes.tools}
-                          >
-                            Netlify
-                          </Button>
-                        </div>
+          <div>
+            <Typography variant="h4" gutterBottom>
+              My Projects
+            </Typography>
+            <Grid container spacing={2}>
+              <Grid item xs={12} sm={4}>
+                <Card className={classes.card}>
+                  <Grid
+                    container
+                    display="flex"
+                    alignItems="center"
+                    spacing={2}
+                  >
+                    <Grid item xs={4}>
+                      <CardMedia>
+                        <img
+                          height="auto"
+                          alt="bword"
+                          src="/images/sirenaalyce.png"
+                          className={classes.image}
+                        />
+                      </CardMedia>
+                    </Grid>
+                    <Grid item xs={7} sm container>
+                      <Grid item xs container direction="column" spacing={2}>
+                        <CardContent>
+                          <Typography component="h6" variant="h5">
+                            SirenaAlyce.com
+                          </Typography>
+                          <div className={classes.toolsdiv}>
+                            <Button
+                              variant="contained"
+                              size="small"
+                              color="primary"
+                              className={classes.tools}
+                            >
+                              NextJs
+                            </Button>
+                            <Button
+                              variant="contained"
+                              size="small"
+                              color="primary"
+                              className={classes.tools}
+                            >
+                              Boostrap
+                            </Button>
+                            <Button
+                              variant="contained"
+                              size="small"
+                              color="primary"
+                              className={classes.tools}
+                            >
+                              Reactstrap
+                            </Button>
+                            <Button
+                              variant="contained"
+                              size="small"
+                              color="primary"
+                              className={classes.tools}
+                            >
+                              Material UI
+                            </Button>
+                            <Button
+                              variant="contained"
+                              size="small"
+                              color="primary"
+                              className={classes.tools}
+                            >
+                              Netlify
+                            </Button>
+                          </div>
 
-                        <CardActions>
-                          <Button size="small" color="primary" disabled>
-                            In Progress
-                          </Button>
-                          <Button>
-                            <Link href="https://github.com/SirenaAlyceDev/">
-                              <a className={classes.cardlink}>GitHub Repo</a>
-                            </Link>
-                          </Button>
-                        </CardActions>
-                      </CardContent>
+                          <CardActions>
+                            <Button size="small" color="primary" disabled>
+                              In Progress
+                            </Button>
+                            <Button>
+                              <Link href="https://github.com/SirenaAlyceDev/">
+                                <a className={classes.cardlink}>GitHub Repo</a>
+                              </Link>
+                            </Button>
+                          </CardActions>
+                        </CardContent>
+                      </Grid>
                     </Grid>
                   </Grid>
-                </Grid>
-              </Card>
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <Card className={classes.card}>
-                <Grid container display="flex" alignItems="center" spacing={2}>
-                  <Grid item xs={4}>
-                    <CardMedia>
-                      <img
-                        alt="bword"
-                        src="/images/BWordLogo.png"
-                        className={classes.image}
-                      />
-                    </CardMedia>
-                  </Grid>
-                  <Grid item xs={7} sm container>
-                    <Grid item xs container direction="column" spacing={2}>
-                      <CardContent>
-                        <Typography component="h6" variant="h5">
-                          The B-Word (Web & Mobile App)
-                        </Typography>
-                        <div className={classes.toolsdiv}>
-                          <Button
-                            variant="contained"
-                            size="small"
-                            color="primary"
-                            className={classes.tools}
-                          >
-                            React Native
-                          </Button>
-                          <Button
-                            variant="contained"
-                            size="small"
-                            color="primary"
-                            className={classes.tools}
-                          >
-                            Boostrap
-                          </Button>
-                          <Button
-                            variant="contained"
-                            size="small"
-                            color="primary"
-                            className={classes.tools}
-                          >
-                            Reactstrap
-                          </Button>
-                          <Button
-                            variant="contained"
-                            size="small"
-                            color="primary"
-                            className={classes.tools}
-                          >
-                            Material UI
-                          </Button>
-                        </div>
-                        <CardActions>
-                          <Button size="small" color="primary" disabled>
-                            In Progress
-                          </Button>
-                          <Button>
-                            <Link href="https://github.com/SirenaAlyceDev/react-budget">
-                              <a className={classes.cardlink}>GitHub Repo</a>
-                            </Link>
-                          </Button>
-                        </CardActions>
-                      </CardContent>
+                </Card>
+              </Grid>
+              <Grid item xs={12} sm={4}>
+                <Card className={classes.card}>
+                  <Grid
+                    container
+                    display="flex"
+                    alignItems="center"
+                    spacing={2}
+                  >
+                    <Grid item xs={4}>
+                      <CardMedia>
+                        <img
+                          alt="bword"
+                          src="/images/BWordLogo.png"
+                          className={classes.image}
+                        />
+                      </CardMedia>
+                    </Grid>
+                    <Grid item xs={7} sm container>
+                      <Grid item xs container direction="column" spacing={2}>
+                        <CardContent>
+                          <Typography component="h6" variant="h5">
+                            The B-Word (Web & Mobile App)
+                          </Typography>
+                          <div className={classes.toolsdiv}>
+                            <Button
+                              variant="contained"
+                              size="small"
+                              color="primary"
+                              className={classes.tools}
+                            >
+                              React Native
+                            </Button>
+                            <Button
+                              variant="contained"
+                              size="small"
+                              color="primary"
+                              className={classes.tools}
+                            >
+                              Boostrap
+                            </Button>
+                            <Button
+                              variant="contained"
+                              size="small"
+                              color="primary"
+                              className={classes.tools}
+                            >
+                              Reactstrap
+                            </Button>
+                            <Button
+                              variant="contained"
+                              size="small"
+                              color="primary"
+                              className={classes.tools}
+                            >
+                              Material UI
+                            </Button>
+                          </div>
+                          <CardActions>
+                            <Button size="small" color="primary" disabled>
+                              In Progress
+                            </Button>
+                            <Button>
+                              <Link href="https://github.com/SirenaAlyceDev/react-budget">
+                                <a className={classes.cardlink}>GitHub Repo</a>
+                              </Link>
+                            </Button>
+                          </CardActions>
+                        </CardContent>
+                      </Grid>
                     </Grid>
                   </Grid>
-                </Grid>
-              </Card>
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <Card className={classes.card}>
-                <Grid container display="flex" alignItems="center" spacing={2}>
-                  <Grid item xs={4}>
-                    <CardMedia>
-                      <img
-                        alt="bword"
-                        src="/images/seekaty.png"
-                        className={classes.image}
-                      />
-                    </CardMedia>
-                  </Grid>
-                  <Grid item xs={7} sm container>
-                    <Grid item xs container direction="column" spacing={2}>
-                      <CardContent>
-                        <Typography component="h5" variant="h5">
-                          Seekaty Job Board App
-                        </Typography>
-                        <div className={classes.toolsdiv}>
-                          <Button
-                            variant="contained"
-                            size="small"
-                            color="primary"
-                            className={classes.tools}
-                          >
-                            React
-                          </Button>
-                          <Button
-                            variant="contained"
-                            size="small"
-                            color="primary"
-                            className={classes.tools}
-                          >
-                            Reactstrap
-                          </Button>
-                          <Button
-                            variant="contained"
-                            size="small"
-                            color="primary"
-                            className={classes.tools}
-                          >
-                            Material UI
-                          </Button>
-                          <Button
-                            variant="contained"
-                            size="small"
-                            color="primary"
-                            className={classes.tools}
-                          >
-                            MongoDB
-                          </Button>{" "}
-                          <Button
-                            variant="contained"
-                            size="small"
-                            color="primary"
-                            className={classes.tools}
-                          >
-                            Express
-                          </Button>{" "}
-                          <Button
-                            variant="contained"
-                            size="small"
-                            color="primary"
-                            className={classes.tools}
-                          >
-                            Node
-                          </Button>
-                          <Button
-                            variant="contained"
-                            size="small"
-                            color="primary"
-                            className={classes.tools}
-                          >
-                            Heroku
-                          </Button>
-                          <Button
-                            variant="contained"
-                            size="small"
-                            color="primary"
-                            className={classes.tools}
-                          >
-                            Netlify
-                          </Button>
-                        </div>
-                        <CardActions>
-                          <Button size="small" color="primary" disabled>
-                            In Progress
-                          </Button>
-                          <Button>
-                            <Link href="https://affectionate-shirley-7cd6bb.netlify.app/">
-                              <a className={classes.cardlink}>Website</a>
-                            </Link>
-                          </Button>
-                        </CardActions>
-                      </CardContent>
+                </Card>
+              </Grid>
+              <Grid item xs={12} sm={4}>
+                <Card className={classes.card}>
+                  <Grid
+                    container
+                    display="flex"
+                    alignItems="center"
+                    spacing={2}
+                  >
+                    <Grid item xs={4}>
+                      <CardMedia>
+                        <img
+                          alt="bword"
+                          src="/images/seekaty.png"
+                          className={classes.image}
+                        />
+                      </CardMedia>
+                    </Grid>
+                    <Grid item xs={7} sm container>
+                      <Grid item xs container direction="column" spacing={2}>
+                        <CardContent>
+                          <Typography component="h5" variant="h5">
+                            Seekaty Job Board App
+                          </Typography>
+                          <div className={classes.toolsdiv}>
+                            <Button
+                              variant="contained"
+                              size="small"
+                              color="primary"
+                              className={classes.tools}
+                            >
+                              React
+                            </Button>
+                            <Button
+                              variant="contained"
+                              size="small"
+                              color="primary"
+                              className={classes.tools}
+                            >
+                              Reactstrap
+                            </Button>
+                            <Button
+                              variant="contained"
+                              size="small"
+                              color="primary"
+                              className={classes.tools}
+                            >
+                              Material UI
+                            </Button>
+                            <Button
+                              variant="contained"
+                              size="small"
+                              color="primary"
+                              className={classes.tools}
+                            >
+                              MongoDB
+                            </Button>{" "}
+                            <Button
+                              variant="contained"
+                              size="small"
+                              color="primary"
+                              className={classes.tools}
+                            >
+                              Express
+                            </Button>{" "}
+                            <Button
+                              variant="contained"
+                              size="small"
+                              color="primary"
+                              className={classes.tools}
+                            >
+                              Node
+                            </Button>
+                            <Button
+                              variant="contained"
+                              size="small"
+                              color="primary"
+                              className={classes.tools}
+                            >
+                              Heroku
+                            </Button>
+                            <Button
+                              variant="contained"
+                              size="small"
+                              color="primary"
+                              className={classes.tools}
+                            >
+                              Netlify
+                            </Button>
+                          </div>
+                          <CardActions>
+                            <Button size="small" color="primary" disabled>
+                              In Progress
+                            </Button>
+                            <Button>
+                              <Link href="https://affectionate-shirley-7cd6bb.netlify.app/">
+                                <a className={classes.cardlink}>Website</a>
+                              </Link>
+                            </Button>
+                          </CardActions>
+                        </CardContent>
+                      </Grid>
                     </Grid>
                   </Grid>
-                </Grid>
-              </Card>
+                </Card>
+              </Grid>
             </Grid>
-          </Grid>
-        </div>
+          </div>
         </Box>
         <Box className={classes.blog} p={2} m={2}>
           <Grid container display="flex" alignItems="center" spacing={1}>
@@ -495,6 +511,12 @@ export default function HomePage({ allPostsData }) {
             </Grid>
           </Grid>
         </Box>
+        <CookieConsent
+          style={{ background: "#2126B2" }}
+          buttonStyle={{ background: "#f64c71", color: "#fff", fontSize: "13px", borderRadius: "10px" }}
+        >
+          This website uses cookies to enhance the user experience.
+        </CookieConsent>
       </Container>
       <Footer />
     </>

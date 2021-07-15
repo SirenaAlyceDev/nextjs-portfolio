@@ -32,7 +32,7 @@ export default function ContactForm() {
   const classes = useStyles();
 
   return (
-    <Container fluid>
+    <Container>
       <Form
         name="contact"
         method="POST"
