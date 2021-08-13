@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Second Test Blog
-date: 2021-08-13T02:18:33.736Z
+date: "2021-08-12"
 thumbnail: /images/uploads/BWordLogo.png
 rating: 1
 ---
