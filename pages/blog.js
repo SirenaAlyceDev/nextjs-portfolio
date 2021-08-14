@@ -93,7 +93,7 @@ export default function Blog({ allPostsData }) {
                       <Date dateString={date} />
                     </small>
                   </Col>
-                  <Col>image goes here here</Col>
+                  <Col>image goes here</Col>
                 </>
               ))}
           </Row>
