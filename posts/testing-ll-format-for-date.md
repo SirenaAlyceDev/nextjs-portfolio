@@ -1,6 +1,6 @@
 ---
 layout: blog
 title: testing LL format for date
-date: August 14, 2021
+date: "2021-08-19"
 ---
 moment LL
