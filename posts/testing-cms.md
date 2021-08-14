@@ -1,6 +1,5 @@
 ---
 layout: blog
 title: testing cms
-date: 08/14/2021
----
+date: "1989-07-01"
 req'd
