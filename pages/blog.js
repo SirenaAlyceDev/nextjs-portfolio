@@ -94,6 +94,7 @@ export default function Blog({ allPostsData }) {
                     </Link>
                     <br />
                     <small>
+                      {/* {date} */}
                       {/* <Date dateString={date} /> */}
                     </small>
                   </Col>
