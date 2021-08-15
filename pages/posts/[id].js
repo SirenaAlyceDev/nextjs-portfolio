@@ -1,7 +1,6 @@
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import Head from "next/head";
 import Date from "../../components/date";
-import { parseISO } from 'date-fns';
 import Link from "next/link";
 import { Container } from "reactstrap";
 import { DiscussionEmbed } from "disqus-react";
@@ -33,7 +32,7 @@ export default function Post({ postData, home }) {
       <article>
         <h1>{postData.title}</h1>
         <div>
-          <Date dateString={parseISO(postData.date)} />
+          <Date dateString={postData.date} />
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
