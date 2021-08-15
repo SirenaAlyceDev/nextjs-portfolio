@@ -25,6 +25,8 @@ import IconButton from "@material-ui/core/IconButton";
 import CookieConsent from "react-cookie-consent";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import { serialize } from "superjson";
+import superJsonWithNext from "babel-plugin-superjson-next";
 
 const useStyles = makeStyles((theme) => ({
   /* background by https://loading.io/background/m-wave/ */
@@ -106,7 +108,6 @@ export async function getStaticProps() {
     },
   };
 }
-// getStaticProps()
 
 export default function HomePage({ allPostsData }) {
   const classes = useStyles();
@@ -502,7 +503,8 @@ export default function HomePage({ allPostsData }) {
                         </Typography>
                         <br />
                         <small>
-                          <Date dateString={date} />
+                          {/* <Date dateString={date} /> */}
+                          {/* {superJsonWithNext.toString(date)} */}
                         </small>
                       </CardContent>
                     </Card>
