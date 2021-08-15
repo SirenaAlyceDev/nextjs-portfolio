@@ -8,6 +8,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col, List } from "reactstrap";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography } from "@material-ui/core";
+import superJsonWithNext from 'babel-plugin-superjson-next';
+import superjson from 'superjson';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -36,6 +38,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Blog({ allPostsData }) {
   const classes = useStyles();
+  const dateStringified = superjson.stringify(allPostsData);
+  const finished = superjson.parse(dateStringified);
 
   return (
     <BlogLayout home>
@@ -90,7 +94,7 @@ export default function Blog({ allPostsData }) {
                     </Link>
                     <br />
                     <small>
-                      <Date dateString={date} />
+                      {/* <Date dateString={date} /> */}
                     </small>
                   </Col>
                   <Col>image goes here</Col>
@@ -115,7 +119,7 @@ export default function Blog({ allPostsData }) {
                   </Link>
                   <br />
                   <small>
-                    <Date dateString={date} />
+                    {/* <Date dateString={date} /> */}
                   </small>
                 </Col>
               ))}

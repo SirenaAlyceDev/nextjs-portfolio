@@ -31,9 +31,9 @@ export default function Post({ postData, home }) {
       </Head>
       <article>
         <h1>{postData.title}</h1>
-        <div>
+        {/* <div>
           {<Date dateString={postData.date} />}
-        </div>
+        </div> */}
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
       {!home && (
