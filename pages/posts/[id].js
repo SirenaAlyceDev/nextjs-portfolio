@@ -4,14 +4,13 @@ import Date from "../../components/date";
 import Link from "next/link";
 import { Container } from "reactstrap";
 import { DiscussionEmbed } from "disqus-react";
-import { RestoreOutlined } from "@material-ui/icons";
 
 export async function getStaticProps({ params }) {
   // Add the "await" keyword like this:
   const postData = await getPostData(params.id);
   return {
     props: {
-      postData: await res.JSON(),
+      postData,
     },
   };
 }
@@ -33,7 +32,7 @@ export default function Post({ postData, home }) {
       <article>
         <h1>{postData.title}</h1>
         <div>
-          <Date dateString={JSON.stringify(postData.date)} />
+          <Date dateString={postData.date} />
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
