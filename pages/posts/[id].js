@@ -4,13 +4,14 @@ import Date from "../../components/date";
 import Link from "next/link";
 import { Container } from "reactstrap";
 import { DiscussionEmbed } from "disqus-react";
+import { RestoreOutlined } from "@material-ui/icons";
 
 export async function getStaticProps({ params }) {
   // Add the "await" keyword like this:
   const postData = await getPostData(params.id);
   return {
     props: {
-      postData,
+      postData: await res.JSON(),
     },
   };
 }
