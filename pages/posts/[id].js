@@ -4,6 +4,8 @@ import Date from "../../components/date";
 import Link from "next/link";
 import { Container } from "reactstrap";
 import { DiscussionEmbed } from "disqus-react";
+import superjson from 'superjson';
+import superJsonWithNext from "babel-plugin-superjson-next";
 
 export async function getStaticProps({ params }) {
   // Add the "await" keyword like this:
@@ -31,9 +33,9 @@ export default function Post({ postData, home }) {
       </Head>
       <article>
         <h1>{postData.title}</h1>
-        {/* <div>
-          {<Date dateString={postData.date} />}
-        </div> */}
+        <div>
+          {<Date dateString={superjson.stringify(postData.date)} />}
+        </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
       {!home && (

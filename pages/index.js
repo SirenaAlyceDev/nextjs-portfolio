@@ -508,13 +508,7 @@ export default function HomePage({ allPostsData }) {
                         </Typography>
                         <br />
                         <small>
-                        {/* <Date dateString={(date)} /> */}
-                          {/* {superjson.stringify(date)} */}
-                          {/* {console.log(superjson.stringify(date))}
-                          {console.log(typeof(allPostsData))}
-                          {console.log(finished)}
-                          {console.log(typeof(finished))}
-                          {console.log(typeof(date))} */}
+                        <Date dateString={superjson.stringify(date)} />
                         </small>
                       </CardContent>
                     </Card>

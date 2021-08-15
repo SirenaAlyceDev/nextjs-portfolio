@@ -94,8 +94,7 @@ export default function Blog({ allPostsData }) {
                     </Link>
                     <br />
                     <small>
-                      {/* {date} */}
-                      {/* <Date dateString={date} /> */}
+                      <Date dateString={superjson.stringify(date)} />
                     </small>
                   </Col>
                   <Col>image goes here</Col>
@@ -120,7 +119,7 @@ export default function Blog({ allPostsData }) {
                   </Link>
                   <br />
                   <small>
-                    {/* <Date dateString={date} /> */}
+                    <Date dateString={superjson.stringify(date)} />
                   </small>
                 </Col>
               ))}
