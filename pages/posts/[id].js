@@ -5,7 +5,6 @@ import Link from "next/link";
 import { Container } from "reactstrap";
 import { DiscussionEmbed } from "disqus-react";
 import superjson from 'superjson';
-import superJsonWithNext from "babel-plugin-superjson-next";
 
 export async function getStaticProps({ params }) {
   // Add the "await" keyword like this:
