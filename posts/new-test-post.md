@@ -1,6 +1,6 @@
 ---
 layout: blog
 title: new test post
-date: August 16, 2021
+date: 2021-08-14
 ---
 next
