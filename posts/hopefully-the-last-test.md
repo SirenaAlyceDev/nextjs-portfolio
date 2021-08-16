@@ -1,6 +1,6 @@
 ---
 layout: blog
 title: hopefully the last test
-date: August 15, 2021
+date: 2021-08-15
 ---
 hopefully
