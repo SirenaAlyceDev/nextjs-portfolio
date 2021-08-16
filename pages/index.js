@@ -25,9 +25,7 @@ import IconButton from "@material-ui/core/IconButton";
 import CookieConsent from "react-cookie-consent";
 import Header from "../components/header";
 import Footer from "../components/footer";
-import superJsonWithNext from "babel-plugin-superjson-next";
-import superjson, { serialize } from 'superjson';
-import { parse, stringify } from "remark";
+import superjson from 'superjson';
 
 const useStyles = makeStyles((theme) => ({
   /* background by https://loading.io/background/m-wave/ */
