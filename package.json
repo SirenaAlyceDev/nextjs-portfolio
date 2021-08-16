@@ -14,7 +14,7 @@
     "babel-plugin-superjson-next": "^0.3.0",
     "bootstrap": "^4.6.0",
     "bootstrap-social": "^5.1.1",
-    "date-fns": "^2.19.0",
+    "date-fns": "^2.23.0",
     "disqus-react": "^1.1.1",
     "font-awesome": "^4.7.0",
     "gray-matter": "^4.0.2",
