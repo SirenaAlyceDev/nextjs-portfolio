@@ -32,7 +32,7 @@ Ultimately, I want this blog to grow into a vibrant community of creative, intel
 
 ## Let's Connect!
 
-Here is your chance to introduce yourself to the blog. Please share your STEM experiences below.
+Here's your chance to introduce yourself to the community. Please share your STEM experiences below.
 
 What to know about upcoming career opportunities? Connect with other like-minded women? Get great career advice???? Subscribe to my newsletter!
 
