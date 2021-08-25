@@ -5,6 +5,8 @@ date: 2021-08-25T03:21:28.215Z
 ---
 Hey! I'm Sirena Alyce. Welcome to my blog!
 
+<iframe src="https://giphy.com/embed/3o7btV5GAWaGkwjTrO" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/reactionseditor-3o7btV5GAWaGkwjTrO">via GIPHY</a></p>
+
 ## Meet Sirena Alyce
 
 Why does my blog have Credibility?
@@ -41,6 +43,14 @@ STEM career aspirers
 
 Those not sure but interested in learning more about STEM fields/careers
 
+Why should someone read my posts?
+
+If you are a woman of color looking to develop a career in STEM, then look no further.
+
+Lover of Data, Design and Development? Then this is whether you need to be.
+
+<iframe src="https://giphy.com/embed/f0rPFeXM19PI4" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/ShalitaGrant-point-pointing-f0rPFeXM19PI4">via GIPHY</a></p>
+
 Value
 
 You will receive industry insights and current news
@@ -51,17 +61,11 @@ You will get resources including learning resources, job opportunities, tutorial
 
 You will be apart of a supportive, inspiring, lively community
 
-
-
 Writing Style
 
 Encouraging yet spunky
 
-Why should someone read my posts?
 
-If you are a woman of color looking to develop a career in STEM, then look no further.
-
-Lover of Data, Design and Development? Then this is whether you need to be.
 
 What will they get from my posts?
 
@@ -81,11 +85,7 @@ Case Studies/Current Topics
 
 ## The Vision
 
-
-
 Community of Supportive, creative, intelligent, amazing women
-
-
 
 ## Let's Connect!
 
@@ -98,6 +98,8 @@ Be inspired.
 Be encouraged.
 
 Be confident.
+
+<iframe src="https://giphy.com/embed/saXI5qYeNOC4Zo8MDc" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/helloall-thank-you-thanks-thanx-saXI5qYeNOC4Zo8MDc">via GIPHY</a></p>
 
 XOXO,
 
