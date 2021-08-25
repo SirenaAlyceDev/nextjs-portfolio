@@ -14,6 +14,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Title", name: "title", widget: "string", required: true}
+      - {label: "Featured", name: "featured", widget: "boolean", required: true}
       - {label: "Publish Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD"}
       - {label: "Cover Image", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
