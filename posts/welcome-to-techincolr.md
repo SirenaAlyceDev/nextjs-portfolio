@@ -1,6 +1,7 @@
 ---
 layout: blog
 title: Welcome To Techincolr!
+featured: true
 date: 2021-08-25T03:21:28.215Z
 ---
 Hey! I'm Sirena Alyce. Welcome to my blog!
