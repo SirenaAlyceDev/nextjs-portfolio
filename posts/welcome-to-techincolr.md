@@ -3,6 +3,7 @@ layout: blog
 title: Welcome To Techincolr!
 featured: true
 date: 2021-08-25T03:21:28.215Z
+image: /images/uploads/BWordLogo.png
 ---
 Hi there! Sirena Alyce here. I'd like to welcome you to my blog!
 
