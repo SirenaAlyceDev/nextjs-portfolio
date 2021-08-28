@@ -44,7 +44,7 @@ a.nav-link, a.navbar-brand {
 
 a {
     font-family: 'Karla', sans-serif;
-    color: #f64c71 !important;
+    /* color: #f64c71 !important; */
 }
 
 a.makeStyles-bloglink-41:hover {

@@ -15,7 +15,7 @@ import {
       backgroundColor:"transparent",
     },
     link: {
-      color: "#2126b2"
+      color: "#2126B2"
     }
 
   }));
@@ -32,17 +32,17 @@ import {
             <Nav navbar className="ml-auto">
               <NavItem>
                 <NavLink href="/">
-                  <a>Home</a>
+                  <a className={classes.link}>Home</a>
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/blog">
-                <a>Blog</a>
+                <a className={classes.link}>Blog</a>
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/contact">
-                <a>Contact</a>
+                <a className={classes.link}>Contact</a>
                 </NavLink>
               </NavItem>
               {/* <Link>Shop</Link> */}
