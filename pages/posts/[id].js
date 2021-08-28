@@ -37,7 +37,7 @@ export default function Post({ postData, home }) {
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
-      {!home && (
+      {!home && (  
         <div>
           <Link href="/blog">
             <a>← Back to blog home</a>

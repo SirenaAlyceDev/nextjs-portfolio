@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import Head from "next/head";
 import BlogLayout from "../components/bloglayout";
 import { getSortedPostsData } from "../lib/posts";
@@ -8,8 +8,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col, List } from "reactstrap";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography } from "@material-ui/core";
-import superJsonWithNext from 'babel-plugin-superjson-next';
-import superjson from 'superjson';
+import superJsonWithNext from "babel-plugin-superjson-next";
+import superjson from "superjson";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -24,15 +24,15 @@ const useStyles = makeStyles((theme) => ({
   posttitle: {
     color: "#2126B2",
     fontSize: "32px",
-    fontWeight: "bold"
+    fontWeight: "bold",
   },
   bloglink: {
-    color: "#f64c71"
+    color: "#f64c71",
   },
   emphasis: {
     fontWeight: "bold",
     color: "#2126B2",
-    textShadow: "2px 2px 5px #f64c71"
+    textShadow: "2px 2px 5px #f64c71",
   },
 }));
 
@@ -40,7 +40,7 @@ export default function Blog({ allPostsData }) {
   const classes = useStyles();
   const dateStringified = superjson.stringify(allPostsData);
   const finished = superjson.parse(dateStringified);
-
+  
   return (
     <BlogLayout home>
       <Head>
@@ -71,15 +71,22 @@ export default function Blog({ allPostsData }) {
             </List>
             <p>
               From this platform I want women of color to feel{" "}
-              <strong className={classes.emphasis}>inspired</strong>,<strong className={classes.emphasis}>encouraged</strong>,{" "}
-              <strong className={classes.emphasis}>supported</strong>, and <strong className={classes.emphasis}>confident</strong> in
+              <strong className={classes.emphasis}>inspired</strong>,
+              <strong className={classes.emphasis}>encouraged</strong>,{" "}
+              <strong className={classes.emphasis}>supported</strong>, and{" "}
+              <strong className={classes.emphasis}>confident</strong> in
               pursuing a STEM career.{" "}
             </p>
           </Col>
         </Row>
       </section>
       <section className="my-3">
-        <Typography variant="h2" component="h2" className={classes.posttitle} gutterBottom>
+        <Typography
+          variant="h2"
+          component="h2"
+          className={classes.posttitle}
+          gutterBottom
+        >
           FEATURED STORIES
         </Typography>
         <Container>
@@ -97,7 +104,12 @@ export default function Blog({ allPostsData }) {
                       <Date dateString={superjson.stringify(date)} />
                     </small>
                   </Col>
-                  <Col>image goes here</Col>
+                  {image ?                   <Col>
+                    <img src={image} width="200" />
+                  </Col> : console.log('no feat image') }
+                   {/* <Col>
+                     <img src={image} width="200" />
+                  </Col> */}
                 </>
               ))}
           </Row>
@@ -105,11 +117,16 @@ export default function Blog({ allPostsData }) {
       </section>
       {/* the layout stuff is populating here from the layout component */}
       <section className="my-3">
-      <Typography variant="h2" component="h2" className={classes.posttitle} gutterBottom>
-        MORE STORIES
+        <Typography
+          variant="h2"
+          component="h2"
+          className={classes.posttitle}
+          gutterBottom
+        >
+          MORE STORIES
         </Typography>
         <Container>
-          <Row >
+          <Row>
             {allPostsData
               .slice(0, 2)
               .map(({ id, date, title, image, extra }) => (
