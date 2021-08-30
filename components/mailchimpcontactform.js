@@ -39,7 +39,7 @@ export default function MailChimpContactForm() {
   return (
     <Container>
       <Form
-        name="contact"
+        name="newsletter subscription"
         method="POST"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
