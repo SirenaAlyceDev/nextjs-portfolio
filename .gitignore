@@ -29,6 +29,3 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
-# ignores an empty posts folder
-*
-!.gitignore
