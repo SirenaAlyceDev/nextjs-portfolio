@@ -3,7 +3,7 @@ layout: blog
 title: Welcome To Techincolr!
 featured: true
 date: 2021-08-25T03:21:28.215Z
-image: ""
+image: /images/coverimage.png
 ---
 Hi there! Sirena Alyce here. I'd like to welcome you to my blog!
 
@@ -19,11 +19,11 @@ My career journey has been quite interesting as well. I graduated from Spelman C
 
 ## The Blog & The Vision
 
-Are you a woman of color interested in pursuing a career in tech? Look no further.
+Are you a woman of color interested in pursuing a career in tech or data? Look no further.
 
 Love data, design, or development? This is where you should be!
 
-<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/f0rPFeXM19PI4" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/ShalitaGrant-point-pointing-f0rPFeXM19PI4">via GIPHY</a></p>SirenaAlyce.com started as a portfolio site to showcase my development projects to recruiters and employers. I decided to incorporate a blog into the site while I was building it to practice my skills and learn a new framework (Next.js). This is how Techincolr, the blog, started. Once I created the blog, I realized I would eventually have to start posting content and this would serve as a good platform to do that. 
+<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/f0rPFeXM19PI4" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/ShalitaGrant-point-pointing-f0rPFeXM19PI4">via GIPHY</a></p>SirenaAlyce.com started as a portfolio site to showcase my development projects to recruiters and employers. I decided to incorporate a blog into the site while I was building it to practice my skills and learn a new framework (Next.js). This is how Techincolr, the blog, began. Once I created the blog, I realized I would eventually have to start posting content and this would serve as a good platform to do that. 
 
 Whether the impact is small or large, I knew I wanted the content to have a purpose. There is no doubt that women of color are underrepresented in the data and technology fields.  While the representation of women has improved in some STEM professions, there is still a long way to go in the area of engineering and computer science. Women of color held 11.5% of science and engineering roles in the United States in 2017, according to catalyst.org. [Census.gov](https://www.census.gov/library/stories/2021/01/women-making-gains-in-stem-occupations-but-still-underrepresented.html) shows that “Women working in engineering occupations increased from 3% in 1970 to 15% in 2019. And while the percentage of women in computer occupations is higher than in 1970, it actually decreased between 1990 and 2019.” I want to use his platform as a way to help increase that representation.
 
