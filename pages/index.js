@@ -493,7 +493,7 @@ export default function HomePage({ allPostsData }) {
               </Typography>
             </Grid>
             <Grid item xs={12} sm={8}>
-              {allPostsData
+              {allPostsData.length != 0 ? allPostsData
                 .slice(0, 2)
                 .map(({ id, date, title, image, extra }) => (
                   <Grid item xs={12} className={classes.posts} key={id}>
@@ -511,7 +511,7 @@ export default function HomePage({ allPostsData }) {
                       </CardContent>
                     </Card>
                   </Grid>
-                ))}
+                )) : <div><p>No Posts Data Available</p></div>}
             </Grid>
           </Grid>
         </Box>

@@ -91,7 +91,7 @@ export default function Blog({ allPostsData }) {
         </Typography>
         <Container>
           <Row>
-            {allPostsData
+            {allPostsData.length != 0 ? allPostsData
               .filter((posts) => posts["featured"] === true)
               .map(({ id, date, title, image, extra }) => (
                 <>
@@ -111,7 +111,7 @@ export default function Blog({ allPostsData }) {
                      <img src={image} width="200" />
                   </Col> */}
                 </>
-              ))}
+              )) : <div><p>No Featured Posts Available</p></div>}
           </Row>
         </Container>
       </section>
@@ -127,7 +127,7 @@ export default function Blog({ allPostsData }) {
         </Typography>
         <Container>
           <Row>
-            {allPostsData
+            {allPostsData.length != 0 ? allPostsData
               .slice(0, 2)
               .map(({ id, date, title, image, extra }) => (
                 <Col xs="6" key={id}>
@@ -139,7 +139,7 @@ export default function Blog({ allPostsData }) {
                     <Date dateString={superjson.stringify(date)} />
                   </small>
                 </Col>
-              ))}
+              )) : <div><p>No Other Posts Available</p></div>}
           </Row>
         </Container>
       </section>
