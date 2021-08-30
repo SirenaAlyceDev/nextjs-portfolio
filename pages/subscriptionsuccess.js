@@ -24,9 +24,8 @@ export default function ContactSuccess() {
         </Head>
         <Row>
           <Col className="p-3">
-            <h1>Thank You!</h1>
-            <p>I'm looking forward to working together.</p>
-            <p>I'll get back in touch with you soon!</p>
+            <h1>Thank You for Joining!</h1>
+            <p>XOXO,</p>
             <p>-Sirena Alyce</p>
             <Link href="/" className="btn home-button">
               <a className="btn" role="button">

@@ -43,7 +43,7 @@ export default function MailChimpContactForm() {
         method="POST"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
-        action="/success"
+        action="/subscriptionsuccess"
       >
         <Card className={classes.card}>
           <Grid container spacing={2}>
