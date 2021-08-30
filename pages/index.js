@@ -511,7 +511,7 @@ export default function HomePage({ allPostsData }) {
                       </CardContent>
                     </Card>
                   </Grid>
-                )) : <div><p>No Posts Data Available</p></div>}
+                )) : <div><p>No Posts Available</p></div>}
             </Grid>
           </Grid>
         </Box>
