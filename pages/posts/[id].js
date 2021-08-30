@@ -2,12 +2,11 @@ import { getAllPostIds, getPostData } from "../../lib/posts";
 import Head from "next/head";
 import Date from "../../components/date";
 import Link from "next/link";
-import { Container } from "reactstrap";
 import { DiscussionEmbed } from "disqus-react";
 import superjson from 'superjson';
 import MailChimpContactForm from "../../components/mailchimpcontactform";
 import { makeStyles } from "@material-ui/core/styles";
-import { Typography } from "@material-ui/core";
+import { Typography, Container } from "@material-ui/core";
 
 export async function getStaticProps({ params }) {
   // Add the "await" keyword like this:
@@ -38,7 +37,7 @@ export default function Post({ postData, home }) {
   const classes = useStyles();
 
   return (
-    <Container>
+    <Container maxWidth="md">
       <Head>
         <title>{postData.title}</title>
       </Head>
