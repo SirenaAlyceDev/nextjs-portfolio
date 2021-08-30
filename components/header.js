@@ -15,7 +15,13 @@ import {
       backgroundColor:"transparent",
     },
     link: {
-      color: "#2126B2"
+      color: "#2126B2",
+      '&:hover': {
+        color: "#2126B2",
+        textShadow: "0 0 3px #F64C71",
+        textDecoration: "none", 
+        fontWeight: "600"     
+      }
     }
 
   }));

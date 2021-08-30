@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Container } from "reactstrap";
 import { DiscussionEmbed } from "disqus-react";
 import superjson from 'superjson';
+import MailChimpContactForm from "../../components/mailchimpcontactform";
 
 export async function getStaticProps({ params }) {
   // Add the "await" keyword like this:
@@ -44,6 +45,8 @@ export default function Post({ postData, home }) {
           </Link>
         </div>
       )}
+
+      <MailChimpContactForm />
 
       {/* adding disqus code to allow comments on blog posts */}
       <DiscussionEmbed
