@@ -6,6 +6,8 @@ import { Container } from "reactstrap";
 import { DiscussionEmbed } from "disqus-react";
 import superjson from 'superjson';
 import MailChimpContactForm from "../../components/mailchimpcontactform";
+import { makeStyles } from "@material-ui/core/styles";
+import { Typography } from "@material-ui/core";
 
 export async function getStaticProps({ params }) {
   // Add the "await" keyword like this:
@@ -25,14 +27,23 @@ export async function getStaticPaths() {
   };
 }
 
+const useStyles = makeStyles((theme) => ({
+  heading: {
+    fontSize: "40px",
+    fontWeight: "bold"
+  }
+}))
+
 export default function Post({ postData, home }) {
+  const classes = useStyles();
+
   return (
     <Container>
       <Head>
         <title>{postData.title}</title>
       </Head>
       <article>
-        <h1>{postData.title}</h1>
+        <Typography variant="h1" className={classes.heading}>{postData.title}</Typography>
         <div>
           {<Date dateString={superjson.stringify(postData.date)} />}
         </div>
