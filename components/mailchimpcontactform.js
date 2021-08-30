@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "10px",
   },
   subscribe: {
-      color: "#2126B2"
+      color: "#2126B2",
   }
 }));
 
@@ -49,7 +49,7 @@ export default function MailChimpContactForm() {
           <Grid container spacing={2}>
             <Input type="hidden" name="form-name" value="newsletter subscription" />
             <Grid item xs={12}>
-                <Typography variant="h2" align="center" className={classes.subscribe}>Join Techincolr!</Typography>
+                <Typography variant="h3" align="center" className={classes.subscribe}>Join Techincolr!</Typography>
             </Grid>
             <Grid item xs={12}>
               <TextField
