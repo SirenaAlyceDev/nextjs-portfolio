@@ -21,3 +21,20 @@ I want to keep the front end very simple and clean.
 Day 2:
 
 Set up environment and folder structure.
+
+Create repo on github
+
+Use the RN guidance for environment set up to get the project started (https://reactnative.dev/docs/environment-setup)
+
+I am using the Expo CLI quickstart guidance.
+
+```
+expo init EventPlannerApp
+
+cd EventPlannerApp
+yarn start # you can also use: expo start
+```
+
+You'll see a subfolder created with your app name. You'll also see in the terminal that you will be prompted to choose a template. The choices are: blank, blank with typescript config, tabs with typescript config - has example screens and tabs using react navigation and minimal.
+
+![](/images/image1.png)
