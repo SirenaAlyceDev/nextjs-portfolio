@@ -73,6 +73,6 @@ A new window will pop up in your browser.
 
 If you have installed the Expo Client app on your phone, you can scan the QR code, and it will open your app. If you have simulators installed on your computer, you can  press a (android), i (ios), or w (web), to access those simulators. 
 
-On an android phone/emulator you should see:
+On your phone or emulator you should see:
 
-On ios phone/emulator you should see:
+\*add image 4 and 5\*
