@@ -14,6 +14,8 @@ I reviewed the blog post and picked a project - the events planner app.
 
 I reviewed the suggested features that can be implemented as a beginner. I will stick with the suggested features for now. 
 
+Researched steps to planning an event.
+
 I looked for front end inspiration on [dribbble.com](https://dribbble.com/shots) and found a couple shots that I liked. 
 
 I want to keep the front end very simple and clean.
