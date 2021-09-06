@@ -76,3 +76,15 @@ On your phone or emulator you should see:
 \*add image 4 and 5\*
 
 Now you can see your changes in the emulator.
+
+**Folder Structure**
+
+I am going to add a few folders to the structure we have already.
+
+\-components 
+
+\-navigation
+
+\-screens
+
+\*\*\*add the purpose of each folder\*\*\*
