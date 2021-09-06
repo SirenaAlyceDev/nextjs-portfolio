@@ -87,4 +87,4 @@ I am going to add a few folders to the structure we have already.
 
 \-screens
 
-\*\*\*add the purpose of each folder\*\*\*
+\*\*\*add the purpose of each folder & image 6\*\*\*
