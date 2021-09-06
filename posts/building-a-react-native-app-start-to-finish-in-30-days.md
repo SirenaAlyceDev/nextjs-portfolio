@@ -4,8 +4,6 @@ title: Building a React Native App - Start to Finish in 30 Days
 featured: true
 date: 2021-08-31T14:56:11.436Z
 ---
-
-
 This challenge is inspired by instamobile.com's [10 Best React Native App Ideas for Beginners](https://www.instamobile.io/react-native-tutorials/react-native-app-ideas-beginners/) blog post. I want to create a react native app from start to finish in 30 days.
 
 What is React Native?
@@ -20,7 +18,7 @@ I looked for front end inspiration on [dribbble.com](https://dribbble.com/shots)
 
 I want to keep the front end very simple and clean.
 
-Day 2:
+Day 2 & 3:
 
 Set up environment and folder structure.
 
@@ -76,3 +74,5 @@ If you have installed the Expo Client app on your phone, you can scan the QR cod
 On your phone or emulator you should see:
 
 \*add image 4 and 5\*
+
+Now you can see your changes in the emulator.
