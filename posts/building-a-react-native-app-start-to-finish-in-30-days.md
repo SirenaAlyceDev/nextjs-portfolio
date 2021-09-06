@@ -90,3 +90,13 @@ I am going to add a few folders to the structure we have already.
 \-screens
 
 \*\*\*add the purpose of each folder & image 6\*\*\*
+
+install some dependencies:
+
+\- react native paper
+
+\- react navigation
+
+\- quill js
+
+\- react native elements
