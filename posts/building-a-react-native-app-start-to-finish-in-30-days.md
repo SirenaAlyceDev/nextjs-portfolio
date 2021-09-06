@@ -97,6 +97,6 @@ install some dependencies:
 
 \- react navigation
 
-\- quill js
-
 \- react native elements
+
+set up the login and registration screen
