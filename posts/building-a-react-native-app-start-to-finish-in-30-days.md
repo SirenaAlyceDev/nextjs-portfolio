@@ -100,3 +100,9 @@ install some dependencies:
 \- react native elements
 
 set up the login and registration screen
+
+Day 4:
+
+Created a splash screen using canva and docs size configurations.
+
+The splash screen moved to fast during reload so I followed these expo instructions
