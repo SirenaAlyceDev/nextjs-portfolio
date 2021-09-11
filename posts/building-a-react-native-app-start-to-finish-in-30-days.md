@@ -105,4 +105,11 @@ Day 4:
 
 Created a splash screen using canva and docs size configurations.
 
-The splash screen moved to fast during reload so I followed these expo instructions : https://docs.expo.dev/tutorial/configuration/
+The splash screen moved to fast during reload so I followed these expo instructions : https://docs.expo.dev/tutorial/configuration/ 
+
+```
+import * as SplashScreen from 'expo-splash-screen';
+
+SplashScreen.preventAutoHideAsync();
+setTimeout(SplashScreen.hideAsync, 5000);
+```
