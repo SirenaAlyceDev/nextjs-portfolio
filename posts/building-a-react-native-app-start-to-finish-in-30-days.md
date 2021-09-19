@@ -136,4 +136,4 @@ Splash Screen Steps:
 
 Day 18: Took some time off for a week or two
 
-Created a Welcome Screen
+Created a Welcome Screen with Header and Subtitle text and get started button using TouchableOpacity
