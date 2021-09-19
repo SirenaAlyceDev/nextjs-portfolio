@@ -113,3 +113,27 @@ import * as SplashScreen from 'expo-splash-screen';
 SplashScreen.preventAutoHideAsync();
 setTimeout(SplashScreen.hideAsync, 2000);
 ```
+
+Splash Screen Steps:
+
+1. Go to docs.expo.dev/guides/splash-screens/
+
+2. Click link to Figma Template
+
+3. Duplicated Draft to make Edits
+
+4. Add Icon to center of ellipses design
+
+5. Remove Elipses  & grids
+
+6. Repeate for Adaptive Icon and Splash Screen template
+
+7. Check the preview at the bottom to see if it meets your liking
+
+8. Export
+
+9. Add to site
+
+Day 18: Took some time off for a week or two
+
+Created a Welcome Screen
